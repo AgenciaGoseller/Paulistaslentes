@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paulista Lentes | Lentes ZEISS, Varilux e Hoya na Av. Paulista, com a sua armação</title>
+<meta name="description" content="Traga sua receita e sua armação: a Paulista Lentes cuida só das lentes. ZEISS Vision Expert, Top 100 Embaixador ZEISS e Varilux Especialista Select. Preço em média 30% abaixo do mercado, visão simples em até 1 hora e até 10x sem juros.">
+<style>
+/* A fonte precisa vir por @import: ao colar em um widget HTML do WordPress,
+   qualquer <link> do <head> é descartado e o tema assume com a fonte dele. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@200;300;400;500;600&display=swap');
+/* =========================================================
+   PAULISTA LENTES - folha de estilo única
+   Tokens de marca: cores do logo (azul, preto do skyline, branco).
+   ========================================================= */
+:root{
+  --azul:#2478BE;
+  --azul-escuro:#155189;
+  --azul-noite:#0E2A44;
+  --azul-gelo:#EAF4FD;
+  --tinta:#14181D;
+  --cinza:#5C6672;
+  --linha:#E3E7EC;
+  --nevoa:#F4F6F8;
+  --branco:#FFFFFF;
+  --zap:#1FA855;
+  --raio:10px;
+  --max:1180px;
+  --h-cabecalho:104px;
+  --h-faixa:30px;
+  --sobe-hero:72px;
+  --display:'Montserrat', system-ui, sans-serif;
+  --corpo:'Inter', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--corpo);color:var(--tinta);background:var(--branco);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--azul);outline-offset:2px;border-radius:4px}
+[id]{scroll-margin-top:140px}
+
+/* ---------------------------------------------------------
+   BLINDAGEM DE FONTE (WordPress / Elementor)
+   --------------------------------------------------------- */
+body, .wrap, .barra-topo, .faixa-aviso, .painel-orc,
+p, li, span, small, strong, em, label, input, select, textarea,
+dl, dt, dd, summary, figcaption, td, th{
+  font-family:'Inter', system-ui, -apple-system, sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6,
+.btn, .sobrancelha, .menu a, .stat b, .passo-num, .nota-grande b,
+.tel-grande, .olho h4, .rodape h4, .modelo .corpo strong, .citacao p,
+.preco-valor, .preco-valor span, .selo strong, .marcas li, .marco-ano,
+.servico-num, .trilha-bola, .passo-cabecalho .conta, .mvv h3{
+  font-family:'Montserrat', system-ui, -apple-system, sans-serif !important;
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.secao{padding:88px 0}
+.secao--nevoa{background:var(--nevoa)}
+
+/* ---------- tipografia ---------- */
+h1,h2,h3,h4{font-family:var(--display);font-weight:300;letter-spacing:-.01em;margin:0 0 16px}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.08}
+h2{font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.15}
+h3{font-size:1.15rem;font-weight:500}
+.destaque{color:var(--azul);font-weight:500}
+.sobrancelha{
+  font-family:var(--display);font-size:.72rem;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--azul);margin:0 0 14px;
+}
+.subtexto{color:var(--cinza);max-width:58ch;margin:0 0 28px}
+.centro{text-align:center}
+.centro .subtexto{margin-left:auto;margin-right:auto}
+
+/* ---------- botões ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 28px;border:1px solid transparent;border-radius:var(--raio);
+  font-family:var(--display);font-size:.78rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;
+  cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .12s;
+}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:18px;height:18px;flex:0 0 18px}
+.btn--cheio{background:var(--azul);color:#fff}
+.btn--cheio:hover{background:var(--azul-escuro)}
+.btn--linha{background:transparent;color:var(--azul);border-color:var(--azul)}
+.btn--linha:hover{background:var(--azul);color:#fff}
+.btn--claro{background:#fff;color:var(--azul);border-color:#fff}
+.btn--claro:hover{background:transparent;color:#fff;border-color:#fff}
+.btn--vazado-claro{background:transparent;color:#fff;border-color:#fff}
+.btn--vazado-claro:hover{background:#fff;color:var(--azul)}
+.btn--zap{background:var(--zap);color:#fff}
+.btn--zap:hover{background:#178643}
+.btn--grande{padding:17px 34px}
+.btn--bloco{width:100%}
+
+/* ---------- topo ---------- */
+.barra-topo{background:var(--nevoa);border-bottom:1px solid var(--linha);font-size:.8rem;color:var(--cinza)}
+.barra-topo .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.barra-topo a:hover{color:var(--azul)}
+.barra-topo .contatos{display:flex;gap:20px;flex-wrap:wrap}
+
+.cabecalho{position:sticky;top:0;z-index:60;background:#fff}
+.cabecalho .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--h-cabecalho)}
+.marca{display:flex;align-items:center;gap:12px}
+.logo-topo{height:80px !important;width:auto !important;max-width:275px !important;object-fit:contain}
+.menu{display:flex;align-items:center;gap:26px}
+.menu a{
+  font-family:var(--display);font-size:.8rem;font-weight:400;
+  letter-spacing:.04em;color:var(--tinta);padding:6px 0;border-bottom:2px solid transparent;
+}
+.menu a:hover{color:var(--azul);border-bottom-color:var(--azul)}
+.menu a.menu-cta{
+  background:var(--zap);color:#fff;border:0;border-radius:var(--raio);
+  padding:10px 16px;font-weight:500;
+}
+.menu a.menu-cta:hover{background:#178643;color:#fff}
+.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.menu-btn svg{width:26px;height:26px}
+
+.faixa-aviso{background:var(--azul-noite);color:#DCE8F3;font-size:.76rem;text-align:center;padding:6px 24px}
+.faixa-aviso strong{color:#fff;font-weight:600}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;background:#fff;
+  min-height:clamp(420px,42vw,560px);display:flex;align-items:center;
+  margin-top:calc(-1 * var(--sobe-hero));
+}
+.hero-img{
+  position:absolute;top:0;right:0;bottom:0;left:10%;
+  width:auto;height:100%;object-fit:cover;object-position:center top;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+}
+.hero-veu{
+  display:block;position:absolute;inset:0;
+  background:linear-gradient(100deg,
+    rgba(255,255,255,1) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,.97) 40%,
+    rgba(255,255,255,.72) 50%,rgba(255,255,255,.28) 60%,rgba(255,255,255,0) 70%);
+}
+.hero-texto{
+  position:relative;z-index:2;width:100%;max-width:var(--max);
+  margin-left:auto !important;margin-right:auto !important;
+  padding:56px 24px !important;padding-top:calc(56px + var(--sobe-hero)) !important;
+  text-align:left !important;
+}
+.hero-texto > *{max-width:31rem;margin-left:0 !important;margin-right:auto}
+.hero-texto .subtexto{margin-left:0 !important}
+.hero h1{margin-bottom:18px;text-align:left !important}
+.hero-acoes{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-start}
+.hero-prova{
+  margin:22px 0 0;font-size:.84rem;color:var(--cinza);
+  display:flex;align-items:center;gap:8px;
+}
+.hero-prova::before{content:"";width:26px;height:1px;background:var(--azul);display:inline-block}
+
+/* ---------- prova imediata ---------- */
+.faixa-stats{background:var(--azul-noite);color:#EAF1F8;padding:28px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;color:#fff;line-height:1.2}
+.stat span{font-size:.82rem;color:#A8C0D6}
+
+/* ---------- selos e marcas ---------- */
+.selos-secao{padding:64px 0;border-bottom:1px solid var(--linha)}
+.selos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.selo{
+  display:flex;gap:16px;align-items:flex-start;
+  border:1px solid var(--linha);border-radius:var(--raio);padding:22px;background:#fff;
+}
+.selo svg{width:40px;height:40px;flex:0 0 40px;color:var(--azul)}
+.selo strong{display:block;font-weight:500;font-size:1rem;margin-bottom:4px}
+.selo p{margin:0;color:var(--cinza);font-size:.86rem;line-height:1.5}
+.marcas-titulo{margin:44px 0 16px;color:var(--cinza);font-size:.88rem}
+.marcas{
+  list-style:none;margin:0;padding:0;
+  display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px 48px;
+}
+.marcas li{font-size:1.25rem;font-weight:500;letter-spacing:.14em;color:var(--azul-noite);opacity:.82}
+
+/* ---------- lens-only ---------- */
+.duas{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.moldura{position:relative;width:100%;margin:28px 0;isolation:isolate}
+.moldura::before{
+  content:"";position:absolute;inset:22px -22px -22px 22px;
+  border:2px solid var(--azul);border-radius:26px;z-index:-1;
+}
+.moldura-corte{border-radius:26px;overflow:hidden;box-shadow:0 22px 48px rgba(14,42,68,.22);line-height:0}
+.img-moldura{
+  display:block;width:100%;aspect-ratio:4 / 3;height:auto;
+  object-fit:cover;object-position:center;border-radius:26px !important;
+}
+.comparativo{display:grid;gap:14px;margin:0 0 30px}
+.comparativo div{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:16px 18px;border-radius:var(--raio);background:var(--nevoa);
+}
+.comparativo svg{width:22px;height:22px;flex:0 0 22px;color:var(--azul);margin-top:2px}
+.comparativo p{margin:0;font-size:.94rem;color:var(--cinza)}
+.comparativo strong{color:var(--tinta);font-weight:600}
+
+/* ---------- preços (carro-chefe) ---------- */
+.precos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;align-items:stretch}
+.preco{
+  background:#fff;border:1px solid var(--linha);border-radius:14px;padding:30px 26px;
+  display:flex;flex-direction:column;text-align:left;
+}
+.preco--marcado{border-color:var(--azul);box-shadow:0 18px 44px rgba(14,42,68,.12)}
+.preco-etiqueta{
+  align-self:flex-start;font-size:.74rem;font-weight:600;color:var(--azul-escuro);
+  background:var(--azul-gelo);border-radius:999px;padding:4px 12px;margin-bottom:16px;
+}
+.preco h3{font-size:1.2rem;margin-bottom:6px}
+.preco-desc{color:var(--cinza);font-size:.9rem;margin:0 0 20px}
+.preco-valor{font-size:2.3rem;font-weight:400;color:var(--tinta);line-height:1;margin:0}
+.preco-valor span{font-size:1rem;font-weight:500;vertical-align:top;margin-right:4px}
+.preco-parcela{color:var(--azul);font-size:.88rem;font-weight:500;margin:8px 0 20px}
+.preco .lista-check{margin-bottom:26px;flex:1}
+.precos-nota{margin:28px auto 0;color:var(--cinza);font-size:.86rem;max-width:62ch}
+
+/* ---------- serviços ---------- */
+.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;text-align:left}
+.servico{
+  background:#fff;border:1px solid var(--linha);border-radius:var(--raio);
+  padding:28px 24px;display:flex;flex-direction:column;
+}
+.servico--core{grid-column:1 / -1;background:var(--azul-noite);border-color:var(--azul-noite);color:#EAF1F8;padding:34px}
+.servico--core h3{color:#fff;font-size:1.35rem}
+.servico--core .servico-oque{color:#C7DDF1}
+.servico--core .servico-dif{background:rgba(255,255,255,.08);color:#EAF1F8}
+.servico--core .servico-dif b{color:#6FB4EE}
+.servico-num{font-size:.74rem;font-weight:600;letter-spacing:.18em;color:var(--azul);margin-bottom:12px;display:block}
+.servico--core .servico-num{color:#6FB4EE}
+.servico h3{margin-bottom:10px}
+.servico-oque{color:var(--cinza);font-size:.93rem;margin:0 0 16px}
+.servico-dif{
+  margin:auto 0 0;background:var(--nevoa);border-radius:8px;padding:14px 16px;
+  font-size:.88rem;color:var(--tinta);line-height:1.55;
+}
+.servico-dif b{display:block;font-size:.76rem;color:var(--azul);font-weight:600;margin-bottom:4px}
+.servico-core-grade{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:end}
+
+.lista-check{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:9px}
+.lista-check li{position:relative;padding-left:24px;font-size:.92rem;color:var(--cinza)}
+.lista-check li::before{
+  content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;
+  border:2px solid var(--azul);
+}
+.lista-check strong{color:var(--tinta);font-weight:600}
+
+/* ---------- como funciona ---------- */
+.passos{
+  list-style:none;margin:44px 0 0;padding:0;text-align:left;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:24px;
+}
+.passo{border-top:2px solid var(--azul);padding-top:20px}
+.passo-num{display:block;font-size:.74rem;font-weight:600;letter-spacing:.18em;color:var(--azul);margin-bottom:10px}
+.passo h3{margin-bottom:8px;font-size:1.02rem}
+.passo p{color:var(--cinza);font-size:.88rem;margin:0}
+.aviso-distancia{
+  margin:44px auto 0;max-width:760px;display:flex;gap:18px;align-items:center;text-align:left;
+  background:var(--azul-gelo);border-radius:var(--raio);padding:20px 24px;
+}
+.aviso-distancia svg{width:34px;height:34px;flex:0 0 34px;color:var(--azul-escuro)}
+.aviso-distancia p{margin:0;font-size:.92rem;color:var(--azul-noite)}
+
+/* ---------- pedido / orçamento (assistente) ---------- */
+.orc{background:var(--nevoa);padding:80px 0}
+.painel-orc{
+  background:#fff;border-radius:20px;padding:44px;
+  box-shadow:0 30px 70px rgba(6,24,42,.14), 0 2px 6px rgba(6,24,42,.06);
+}
+.orc-cabecalho{text-align:center;border-bottom:1px solid var(--linha);padding-bottom:32px;margin-bottom:36px}
+.orc-cabecalho h2{margin-bottom:10px}
+.orc-cabecalho p{color:var(--cinza);max-width:54ch;margin:0 auto}
+.trilha{display:flex;align-items:center;justify-content:center;margin:30px auto 0;max-width:560px;padding:0 8px}
+.trilha-item{display:flex;align-items:center;flex:1}
+.trilha-item:last-child{flex:0}
+.trilha-bola{
+  width:32px;height:32px;border-radius:50%;flex:0 0 32px;display:grid;place-items:center;
+  font-size:.78rem;font-weight:600;background:var(--nevoa);color:var(--cinza);
+  border:1px solid var(--linha);transition:background .2s,color .2s,border-color .2s;
+}
+.trilha-linha{height:2px;background:var(--linha);flex:1;margin:0 6px;border-radius:2px}
+.trilha-item.ativa .trilha-bola{background:var(--azul);color:#fff;border-color:var(--azul);box-shadow:0 0 0 4px rgba(36,120,190,.16)}
+.trilha-item.feita .trilha-bola{background:var(--azul-escuro);color:#fff;border-color:var(--azul-escuro)}
+.trilha-item.feita .trilha-linha{background:var(--azul)}
+
+.passo-tela{display:none}
+.passo-tela.ativa{display:block;animation:entra .22s ease}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.passo-cabecalho{margin-bottom:22px}
+.passo-cabecalho .conta{font-size:.72rem;font-weight:600;letter-spacing:.18em;color:var(--azul);display:block;margin-bottom:8px}
+.passo-cabecalho h2{font-size:1.5rem;margin-bottom:6px}
+.passo-cabecalho p{color:var(--cinza);font-size:.92rem;margin:0}
+.sub-pergunta{font-weight:500;font-size:.95rem;margin:28px 0 12px}
+
+.opcoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.opcao{position:relative}
+.opcao input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opcao span{
+  display:block;text-align:center;padding:13px 10px;border:1px solid var(--linha);
+  border-radius:var(--raio);font-size:.88rem;font-weight:500;transition:.18s;background:#fff;
+}
+.opcao span small{display:block;font-weight:400;color:var(--cinza);font-size:.76rem;margin-top:2px}
+.opcao input:checked + span{border-color:var(--azul);background:var(--azul-gelo);color:var(--azul-escuro)}
+.opcao input:focus-visible + span{outline:3px solid var(--azul);outline-offset:2px}
+.opcao:hover span{border-color:#B7CBDE}
+
+.modelos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.modelo{position:relative}
+.modelo input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}
+.modelo .cartao{
+  border:1px solid var(--linha);border-radius:var(--raio);height:100%;
+  transition:.18s;background:#fff;padding:18px;display:flex;gap:14px;align-items:flex-start;
+}
+.modelo .cartao svg{width:28px;height:28px;flex:0 0 28px;color:var(--azul)}
+.modelo .corpo strong{display:block;font-weight:500;font-size:.96rem;margin-bottom:4px}
+.modelo .corpo small{color:var(--cinza);font-size:.8rem;line-height:1.45;display:block}
+.modelo input:checked + .cartao{border-color:var(--azul);background:var(--azul-gelo);box-shadow:0 0 0 2px rgba(36,120,190,.22)}
+.modelo input:focus-visible + .cartao{outline:3px solid var(--azul);outline-offset:2px}
+.modelo:hover .cartao{border-color:#B7CBDE}
+
+.grades{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.olho{border:1px solid var(--linha);border-radius:var(--raio);padding:18px}
+.olho h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--azul);font-weight:600;margin:0 0 14px}
+.campos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.campo label{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza);margin-bottom:5px}
+.campo select,.campo input{width:100%;padding:10px 8px;border:1px solid var(--linha);border-radius:8px;background:#fff;font-size:.88rem}
+.campo select:focus,.campo input:focus{border-color:var(--azul);outline:none}
+.linha-campos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.erro{color:#C0392B;font-size:.86rem;margin:12px 0 0;display:none}
+.erro.visivel{display:block}
+.nota-garantia{
+  margin:12px 0 0;font-size:.84rem;color:var(--azul-noite);
+  background:var(--azul-gelo);border-radius:8px;padding:12px 14px;display:none;
+}
+.nota-garantia.visivel{display:block}
+
+.receita{margin-top:26px;padding:24px;border:1px dashed #B7CBDE;border-radius:var(--raio);background:var(--nevoa)}
+.receita h4{font-size:.98rem;font-weight:500;margin:0 0 8px;font-family:var(--display)}
+.receita p{color:var(--cinza);font-size:.88rem;margin:0 0 16px}
+.receita-botao{
+  display:inline-flex;align-items:center;gap:9px;cursor:pointer;padding:12px 22px;
+  border:1px solid var(--azul);border-radius:var(--raio);color:var(--azul);background:#fff;
+  font-family:var(--display);font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:.2s;
+}
+.receita-botao:hover{background:var(--azul);color:#fff}
+.receita-botao svg{width:17px;height:17px}
+.receita-previa{margin-top:18px;display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:12px}
+.receita-previa[hidden]{display:none}
+.receita-previa img{width:88px;height:88px;object-fit:cover;border-radius:8px;background:var(--nevoa)}
+.receita-previa img[hidden]{display:none}
+.receita-info{display:flex;flex-direction:column;gap:6px;min-width:0}
+.receita-info strong{font-size:.88rem;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.receita-remover{background:none;border:0;padding:0;cursor:pointer;color:var(--cinza);font-size:.8rem;text-decoration:underline;text-align:left}
+.receita-remover:hover{color:#C0392B}
+
+.revisao{background:var(--nevoa);border-radius:var(--raio);padding:24px;margin-bottom:8px}
+.revisao dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:.92rem}
+.revisao dt{color:var(--cinza)}
+.revisao dd{margin:0;font-weight:500}
+.revisao .editar{background:none;border:0;padding:0;color:var(--azul);cursor:pointer;font-size:.78rem;text-decoration:underline;margin-left:8px}
+.fim-aviso{font-size:.82rem;color:var(--cinza);text-align:center;margin:16px 0 0}
+.orc-nav{display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--linha);margin-top:32px;padding-top:24px}
+.btn--fantasma{background:transparent;color:var(--cinza);border-color:var(--linha)}
+.btn--fantasma:hover{color:var(--tinta);border-color:var(--cinza)}
+.btn[hidden]{display:none}
+
+/* ---------- citação ---------- */
+.citacao{background:var(--azul-escuro);color:#fff;text-align:center;padding:76px 0}
+.citacao p{font-weight:300;font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.35;max-width:26ch;margin:0 auto 20px}
+.citacao small{letter-spacing:.04em;font-size:.95rem;color:#C7DDF1;display:block}
+.citacao-acoes{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+
+/* ---------- avaliações ---------- */
+.nota-grande{margin:8px 0 0;display:flex;flex-direction:column;align-items:center;gap:2px}
+.nota-grande b{font-weight:300;font-size:3.4rem;color:var(--azul);line-height:1}
+.nota-grande span{font-size:.84rem;color:var(--cinza);letter-spacing:.04em}
+.depoimentos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.depoimento{
+  margin:0;background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:26px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:18px;
+}
+.depoimento blockquote{margin:0;font-size:.95rem;color:var(--tinta);line-height:1.6}
+.depoimento blockquote::before{content:"";display:block;width:28px;height:2px;background:var(--azul);margin-bottom:14px}
+.depoimento figcaption{display:flex;flex-direction:column;gap:2px}
+.depoimento figcaption strong{font-size:.9rem}
+.depoimento figcaption span{font-size:.8rem;color:var(--cinza)}
+
+/* ---------- história ---------- */
+.linha-tempo{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:0}
+.marco{position:relative;padding:0 0 26px 30px;border-left:2px solid var(--linha);margin-left:6px}
+.marco:last-child{padding-bottom:0;border-left-color:transparent}
+.marco::before{
+  content:"";position:absolute;left:-8px;top:2px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:2px solid var(--azul);
+}
+.marco--forte::before{background:var(--azul)}
+.marco-ano{display:block;font-size:.8rem;font-weight:600;color:var(--azul);margin-bottom:4px;letter-spacing:.06em}
+.marco p{margin:0;color:var(--cinza);font-size:.93rem}
+.marco strong{color:var(--tinta);font-weight:600}
+
+.mvv{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
+.mvv-bloco{border-radius:14px;padding:32px;background:var(--azul-noite);color:#C7DDF1}
+.mvv-bloco h3{color:#fff;font-size:1.3rem;font-weight:400}
+.mvv-bloco p{margin:0;font-size:.97rem;line-height:1.65}
+.mvv-bloco--claro{background:var(--azul-gelo);color:var(--azul-noite)}
+.mvv-bloco--claro h3{color:var(--azul-noite)}
+.valores{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:48px}
+.valor{border-top:2px solid var(--azul);padding-top:18px}
+.valor h3{margin-bottom:6px;font-size:1rem}
+.valor p{color:var(--cinza);font-size:.88rem;margin:0}
+
+/* ---------- garantia ---------- */
+.garantias{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px;text-align:left}
+.garantia{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:30px}
+.garantia h3{margin-bottom:6px}
+.garantia-sub{color:var(--cinza);font-size:.88rem;margin:0 0 18px}
+.garantia .lista-check li{font-size:.9rem}
+.garantia-base{margin:28px auto 0;max-width:70ch;color:var(--cinza);font-size:.86rem}
+
+/* ---------- faq ---------- */
+.faq{max-width:780px;margin:36px auto 0;text-align:left}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 8px;display:flex;align-items:center;gap:16px;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--azul);font-size:1.3rem;line-height:1;width:16px;flex:0 0 16px}
+.faq details[open] summary::before{content:"–"}
+.faq p{margin:0 8px 22px 40px;color:var(--cinza);font-size:.94rem}
+
+/* ---------- contato ---------- */
+.contato-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:44px}
+.contato-bloco{border-top:2px solid var(--azul);padding-top:20px}
+.contato-bloco h3{margin-bottom:12px}
+.contato-bloco p{color:var(--cinza);font-size:.94rem;margin:0 0 14px}
+.contato-dica{font-size:.88rem !important;font-style:italic}
+.horarios{width:100%;border-collapse:collapse;font-size:.92rem}
+.horarios th{text-align:left;font-weight:400;color:var(--cinza);padding:7px 0;border-bottom:1px solid var(--linha)}
+.horarios td{text-align:right;padding:7px 0;border-bottom:1px solid var(--linha);font-weight:500}
+.tel-grande{font-size:1.5rem;font-weight:400;color:var(--azul)}
+.tel-grande:hover{color:var(--azul-escuro)}
+.contato-acoes{display:flex;flex-direction:column;gap:10px;align-items:flex-start;margin-top:6px}
+.mapa-caixa{margin-top:36px;border-radius:26px;overflow:hidden;box-shadow:0 22px 48px rgba(14,42,68,.16);line-height:0}
+.mapa-caixa iframe{width:100%;height:380px;border:0;display:block}
+
+/* ---------- cta final ---------- */
+.cta-final{background:var(--azul);color:#fff;padding:76px 0}
+.cta-final .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.cta-final h2{color:#fff;margin-bottom:8px}
+.cta-final p{color:#DCEBF8;margin:0}
+.cta-final .acoes{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- skyline ---------- */
+.skyline{display:block;width:100%;height:64px;fill:var(--azul-noite)}
+.skyline--sobre-azul{fill:var(--azul)}
+
+/* ---------- rodapé ---------- */
+.rodape{background:var(--azul-noite);color:#B9C9D8;font-size:.88rem}
+.rodape a:hover{color:#fff}
+.rodape-colunas{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding:64px 0 40px}
+.rodape h4{color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
+.rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.logo-rodape{width:120px !important;height:auto !important;object-fit:contain;filter:brightness(0) invert(1)}
+.rodape-base{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem}
+
+/* ---------- botão flutuante ---------- */
+.zap-flutua{
+  position:fixed;right:20px;bottom:20px;z-index:80;width:58px;height:58px;border-radius:50%;
+  background:var(--zap);display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.28);transition:transform .18s;
+}
+.zap-flutua:hover{transform:scale(1.06)}
+.zap-flutua svg{width:30px;height:30px;fill:#fff}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1080px){
+  .menu{gap:18px}
+  .menu a{font-size:.74rem}
+  .passos{grid-template-columns:repeat(3,1fr)}
+  .valores{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:940px){
+  .secao{padding:64px 0}
+  .duas{grid-template-columns:1fr;gap:32px}
+  .hero{min-height:0}
+  .hero-texto{padding-top:calc(30px + var(--sobe-hero)) !important;padding-bottom:48px !important}
+  .hero-img{left:0;width:100%;-webkit-mask-image:none;mask-image:none}
+  .hero-veu{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.90) 55%,rgba(255,255,255,.72) 100%)}
+  .logo-topo{height:60px !important;max-width:200px !important}
+  .cabecalho .wrap{height:84px}
+  :root{--h-cabecalho:84px;--h-faixa:44px;--sobe-hero:50px}
+  .stats{grid-template-columns:1fr 1fr;gap:22px}
+  .selos{grid-template-columns:1fr}
+  .precos{grid-template-columns:1fr;max-width:480px;margin-left:auto;margin-right:auto}
+  .servicos{grid-template-columns:1fr}
+  .servico-core-grade{grid-template-columns:1fr;gap:18px}
+  .moldura{margin:22px 0}
+  .moldura::before{inset:16px -16px -16px 16px}
+  .passos{grid-template-columns:1fr 1fr;gap:22px}
+  .depoimentos{grid-template-columns:1fr}
+  .mvv{grid-template-columns:1fr}
+  .valores{grid-template-columns:1fr 1fr}
+  .garantias{grid-template-columns:1fr}
+  .contato-grade{grid-template-columns:1fr;gap:28px}
+  .mapa-caixa iframe{height:280px}
+  .rodape-colunas{grid-template-columns:1fr 1fr}
+  .cta-final .wrap{grid-template-columns:1fr}
+  .menu{
+    display:none;position:absolute;top:calc(var(--h-cabecalho) + var(--h-faixa));left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--linha);
+    flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 18px;
+  }
+  .menu.aberto{display:flex}
+  .menu a{padding:13px 0;border-bottom:1px solid var(--linha);font-size:.84rem}
+  .menu a.menu-cta{margin-top:12px;text-align:center;padding:13px}
+  .menu-btn{display:block}
+  .painel-orc{padding:26px 20px}
+  .orc-nav{flex-direction:column-reverse}
+  .orc-nav .btn{width:100%}
+  .trilha{max-width:100%}
+  .trilha-bola{width:26px;height:26px;flex-basis:26px;font-size:.7rem}
+  .grades{grid-template-columns:1fr}
+  .linha-campos{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .campos{grid-template-columns:1fr 1fr}
+  .passos{grid-template-columns:1fr}
+  .valores{grid-template-columns:1fr}
+  .nota-grande b{font-size:2.8rem}
+  .barra-topo .wrap{justify-content:center;font-size:.74rem;text-align:center}
+  .marcas{gap:12px 28px}
+  .marcas li{font-size:1.05rem}
+  .aviso-distancia{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== TOPO ===================== -->
+<div class="barra-topo">
+  <div class="wrap">
+    <span>Av. Paulista, 392 &ndash; loja 147 &middot; Boulevard Monti Mare</span>
+    <span class="contatos">
+      <a href="#" data-zap-direto>WhatsApp</a>
+      <a href="tel:+551134593080">(11) 3459-3080</a>
+    </span>
+  </div>
+</div>
+
+<header class="cabecalho">
+  <div class="wrap">
+    <a class="marca" href="#" aria-label="Paulista Lentes, página inicial">
+      <img class="logo-topo" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/Sem-nome-1350-x-1080-px-scaled.png" alt="Paulista Lentes">
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#lens-only">Lens-Only</a>
+      <a href="#precos">Preços</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#garantia">Garantia</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#contato">Contato</a>
+      <a class="menu-cta" href="#pedido">Fazer pedido</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="faixa-aviso">
+    <strong>Até 10x sem juros</strong> em todos os produtos &middot; Visão simples pronta em até 1 hora &middot; Atendemos todo o Brasil
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <img class="hero-img" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/banner501-1.jpg" alt="Pessoa usando óculos com lentes da Paulista Lentes">
+  <div class="hero-veu" aria-hidden="true"></div>
+  <div class="wrap hero-texto">
+    <p class="sobrancelha">Especialistas em lentes &middot; Lens-Only</p>
+    <h1>Traga sua receita e sua armação. <span class="destaque">A gente cuida das lentes.</span></h1>
+    <p class="subtexto">
+      Lentes ZEISS, Varilux e Hoya com preço em média 30% abaixo do mercado.
+      Visão simples fica pronta em até 1 hora, e tudo pode ser parcelado em até 10x sem juros.
+    </p>
+    <div class="hero-acoes">
+      <a class="btn btn--zap" href="#pedido">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+        Fazer meu pedido
+      </a>
+      <a class="btn btn--linha" href="#precos">Ver preços</a>
+    </div>
+    <p class="hero-prova">Mais de 50 mil clientes atendidos &middot; ZEISS Vision Expert</p>
+  </div>
+</section>
+
+<!-- ===================== PROVA IMEDIATA ===================== -->
+<section class="faixa-stats" aria-label="Números da Paulista Lentes">
+  <div class="wrap stats">
+    <div class="stat"><b>+50 mil</b><span>clientes atendidos desde 2014</span></div>
+    <div class="stat"><b>Até 1 hora</b><span>para lentes de visão simples</span></div>
+    <div class="stat"><b>~30% abaixo</b><span>da média de preço do mercado</span></div>
+    <div class="stat"><b>10x sem juros</b><span>no cartão, em todos os produtos</span></div>
+  </div>
+</section>
+
+<!-- ===================== SELOS E MARCAS ===================== -->
+<section class="selos-secao" aria-labelledby="titulo-selos">
+  <div class="wrap centro">
+    <p class="sobrancelha">Certificações</p>
+    <h2 id="titulo-selos">Reconhecidos pelas <span class="destaque">maiores marcas de lentes do mundo</span></h2>
+
+    <div class="selos" style="text-align:left">
+      <div class="selo">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="20" cy="16" r="10"/><path d="M14 24l-3 12 9-4 9 4-3-12"/><path d="M16 16l3 3 5-6"/></svg>
+        <div>
+          <strong>Top 100 Embaixador ZEISS Brasil</strong>
+          <p>A maior classificação que a ZEISS concede às óticas parceiras no país.</p>
+        </div>
+      </div>
+      <div class="selo">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="13" cy="21" r="7"/><circle cx="27" cy="21" r="7"/><path d="M20 21h0M6 18l-2-3M34 18l2-3"/></svg>
+        <div>
+          <strong>ZEISS Vision Expert</strong>
+          <p>Certificação técnica ZEISS para indicar e adaptar suas lentes com precisão.</p>
+        </div>
+      </div>
+      <div class="selo">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 4l4.5 9.2 10.1 1.5-7.3 7.1 1.7 10.1L20 27.1l-9 4.8 1.7-10.1-7.3-7.1 10.1-1.5z"/></svg>
+        <div>
+          <strong>Varilux Especialista Select</strong>
+          <p>Especialistas certificados em lentes multifocais Varilux, da Essilor.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="marcas-titulo">Trabalhamos com</p>
+    <ul class="marcas">
+      <li>ZEISS</li>
+      <li>VARILUX</li>
+      <li>ESSILOR</li>
+      <li>HOYA</li>
+      <li>JOHNSON &amp; JOHNSON</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== LENS-ONLY ===================== -->
+<section class="secao" id="lens-only">
+  <div class="wrap duas">
+    <div>
+      <p class="sobrancelha">O modelo Lens-Only</p>
+      <h2>Você não paga pela armação. <span class="destaque">Paga só pela lente certa.</span></h2>
+      <p class="subtexto">
+        Somos uma consultoria de lentes oftalmológicas. Você traz a receita e a armação que
+        já tem, ou que comprou em outro lugar, e a gente cuida das medidas, da encomenda e da
+        montagem das lentes novas.
+      </p>
+      <div class="comparativo">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+          <p><strong>Sem margem escondida na armação.</strong> O preço fica em média 30% abaixo do mercado porque você só paga pela lente.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+          <p><strong>Laboratório próprio com 3 máquinas facetadoras.</strong> É isso que garante a visão simples pronta em até 1 hora.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+          <p><strong>Consultoria focada na sua receita.</strong> A indicação é da tecnologia de lente que você realmente precisa, sem pacote empurrado.</p>
+        </div>
+      </div>
+      <a class="btn btn--cheio" href="#pedido">Fazer meu pedido</a>
+    </div>
+    <div class="moldura">
+      <div class="moldura-corte">
+        <img class="img-moldura" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/1.jpg" alt="Lentes sendo montadas na armação do cliente" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREÇOS ===================== -->
+<section class="secao secao--nevoa" id="precos">
+  <div class="wrap centro">
+    <p class="sobrancelha">Mais procurados</p>
+    <h2>Preço claro, <span class="destaque">em até 10x sem juros</span></h2>
+    <p class="subtexto">As três lentes que mais saem da loja. Escolha uma e mande seu pedido pelo WhatsApp.</p>
+
+    <div class="precos">
+      <article class="preco">
+        <span class="preco-etiqueta">Pronta em até 1 hora</span>
+        <h3>Visão simples</h3>
+        <p class="preco-desc">Lente para longe ou para perto, montada na sua armação.</p>
+        <p class="preco-valor"><span>R$</span>80,00</p>
+        <p class="preco-parcela">ou 10x de R$ 8,00 sem juros</p>
+        <ul class="lista-check">
+          <li>Miopia, hipermetropia ou astigmatismo</li>
+          <li>Corte e montagem no nosso laboratório</li>
+          <li>Retirada no mesmo dia</li>
+        </ul>
+        <a class="btn btn--zap btn--bloco" href="#" data-zap-produto="Lente de visão simples (longe ou perto) por R$ 80,00">Pedir pelo WhatsApp</a>
+      </article>
+
+      <article class="preco preco--marcado">
+        <span class="preco-etiqueta">ZEISS</span>
+        <h3>Multifocal ZEISS</h3>
+        <p class="preco-desc">Perto, intermediário e longe no mesmo óculos.</p>
+        <p class="preco-valor"><span>R$</span>650,00</p>
+        <p class="preco-parcela">ou 10x de R$ 65,00 sem juros</p>
+        <ul class="lista-check">
+          <li><strong>Todos os tratamentos</strong> incluídos</li>
+          <li>Garantias ZEISS de fabricação e adaptação</li>
+          <li>Medidas digitais para adaptação mais rápida</li>
+        </ul>
+        <a class="btn btn--zap btn--bloco" href="#" data-zap-produto="Lente multifocal ZEISS com todos os tratamentos e garantias por R$ 650,00">Pedir pelo WhatsApp</a>
+      </article>
+
+      <article class="preco">
+        <span class="preco-etiqueta">Varilux</span>
+        <h3>Varilux Comfort Max</h3>
+        <p class="preco-desc">Multifocal Varilux, da Essilor, com os tratamentos essenciais.</p>
+        <p class="preco-valor"><span>R$</span>1.400,00</p>
+        <p class="preco-parcela">ou 10x de R$ 140,00 sem juros</p>
+        <ul class="lista-check">
+          <li><strong>Antirreflexo</strong> incluído</li>
+          <li><strong>Proteção contra luz azul</strong> incluída</li>
+          <li>Somos Varilux Especialista Select</li>
+        </ul>
+        <a class="btn btn--zap btn--bloco" href="#" data-zap-produto="Varilux Comfort Max com antirreflexo e proteção contra luz azul por R$ 1.400,00">Pedir pelo WhatsApp</a>
+      </article>
+    </div>
+
+    <p class="precos-nota">
+      Você traz a armação, a gente monta a lente. Os valores são confirmados depois da
+      análise técnica da sua receita. Procurando outra lente? <a href="#pedido" style="color:var(--azul);text-decoration:underline">Monte seu pedido</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== SERVIÇOS ===================== -->
+<section class="secao" id="servicos">
+  <div class="wrap centro">
+    <p class="sobrancelha">Serviços</p>
+    <h2>Tudo sobre lentes, <span class="destaque">em um só lugar</span></h2>
+    <p class="subtexto">O que cada serviço é, e o que muda quando é feito aqui.</p>
+  </div>
+
+  <div class="wrap servicos">
+
+    <article class="servico servico--core">
+      <span class="servico-num">Nosso serviço principal</span>
+      <div class="servico-core-grade">
+        <div>
+          <h3>Consultoria técnica e montagem Lens-Only</h3>
+          <p class="servico-oque">
+            Você traz a armação que já tem, ou que comprou em outro lugar, e nós cuidamos
+            exclusivamente das medidas ópticas, da encomenda e da montagem das novas lentes.
+          </p>
+        </div>
+        <p class="servico-dif">
+          <b>Nosso diferencial</b>
+          Foco total em eficiência. Você não paga margens abusivas embutidas em armações e
+          recebe uma consultoria 100% voltada para a melhor tecnologia de lente para a sua
+          receita, com entrega rápida.
+        </p>
+      </div>
+    </article>
+
+    <article class="servico">
+      <span class="servico-num">Monofocais</span>
+      <h3>Lentes de visão simples</h3>
+      <p class="servico-oque">Corrigem uma única distância: miopia, hipermetropia ou astigmatismo.</p>
+      <p class="servico-dif">
+        <b>Nosso diferencial</b>
+        Das opções convencionais às lentes de alto índice de refração, mais finas e leves,
+        com melhor estética e conforto e entrega rápida.
+      </p>
+    </article>
+
+    <article class="servico">
+      <span class="servico-num">Progressivas</span>
+      <h3>Lentes multifocais</h3>
+      <p class="servico-oque">Transição suave entre perto, intermediário e longe no mesmo óculos.</p>
+      <p class="servico-dif">
+        <b>Nosso diferencial</b>
+        Desenhos digitais e personalizados, com adaptação muito mais rápida e campos de visão
+        mais amplos, devolvendo sua autonomia visual.
+      </p>
+    </article>
+
+    <article class="servico">
+      <span class="servico-num">Escritório e telas</span>
+      <h3>Lentes ocupacionais</h3>
+      <p class="servico-oque">Otimizadas para o trabalho, com foco em perto e intermediário: leitura e computador.</p>
+      <p class="servico-dif">
+        <b>Nosso diferencial</b>
+        Muito procuradas pelo público executivo da Paulista, reduzem a fadiga visual e as dores
+        posturais no fim do expediente.
+      </p>
+    </article>
+
+    <article class="servico">
+      <span class="servico-num">Grau e estética</span>
+      <h3>Lentes de contato</h3>
+      <p class="servico-oque">
+        Descarte diário, quinzenal ou mensal, para miopia, hipermetropia, astigmatismo
+        (tóricas) e presbiopia (multifocais).
+      </p>
+      <p class="servico-dif">
+        <b>Nosso diferencial</b>
+        Orientação técnica sobre a melhor opção para a sua rotina, com saúde ocular e conforto
+        prolongado.
+      </p>
+    </article>
+
+    <article class="servico">
+      <span class="servico-num">Upgrades de lente</span>
+      <h3>Tratamentos e tecnologias premium</h3>
+      <p class="servico-oque">
+        Filtro de luz azul contra telas digitais, antirreflexo para mais nitidez e lentes
+        fotossensíveis/Transitions, que escurecem no sol.
+      </p>
+      <p class="servico-dif">
+        <b>Nosso diferencial</b>
+        Explicamos com transparência a real necessidade de cada tratamento no seu dia a dia,
+        sem empurrar pacotes desnecessários.
+      </p>
+    </article>
+
+    <article class="servico">
+      <span class="servico-num">Pagamento</span>
+      <h3>Até 10x sem juros</h3>
+      <p class="servico-oque">
+        Todos os produtos podem ser parcelados em até 10x sem juros no cartão de crédito.
+        Também aceitamos débito e aproximação.
+      </p>
+      <p class="servico-dif">
+        <b>Por que isso importa</b>
+        Lente de alta tecnologia cabendo no seu orçamento, sem precisar abrir mão da qualidade.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== COMO FUNCIONA ===================== -->
+<section class="secao secao--nevoa" id="como-funciona">
+  <div class="wrap centro">
+    <p class="sobrancelha">Como funciona</p>
+    <h2>Da receita ao óculos pronto, <span class="destaque">em 5 etapas</span></h2>
+    <p class="subtexto">Visão simples fica pronta em até 1 hora. Nas outras lentes, você recebe o prazo exato na ordem de serviço.</p>
+
+    <ol class="passos">
+      <li class="passo">
+        <span class="passo-num">01</span>
+        <h3>Você manda a receita</h3>
+        <p>Pelo WhatsApp ou na loja, com a foto da receita atualizada. Conte se já tem a armação ou se vai providenciar.</p>
+      </li>
+      <li class="passo">
+        <span class="passo-num">02</span>
+        <h3>Orçamento transparente</h3>
+        <p>Fazemos a leitura técnica da receita e enviamos opções claras, do melhor custo-benefício à mais alta tecnologia.</p>
+      </li>
+      <li class="passo">
+        <span class="passo-num">03</span>
+        <h3>Medidas digitais</h3>
+        <p>Com a sua armação em mãos, medimos DNP e altura de montagem com precisão milimétrica. Você aprova o pedido e paga 50% ou o valor integral.</p>
+      </li>
+      <li class="passo">
+        <span class="passo-num">04</span>
+        <h3>Produção e montagem</h3>
+        <p>As lentes são conferidas no lensômetro, para ficarem 100% fiéis à receita, e cortadas na sua armação.</p>
+      </li>
+      <li class="passo">
+        <span class="passo-num">05</span>
+        <h3>Entrega e ajuste</h3>
+        <p>Avisamos pelo WhatsApp. Na retirada, ajustamos hastes e plaquetas no seu rosto. Também dá para enviar por courier ou motoboy.</p>
+      </li>
+    </ol>
+
+    <div class="aviso-distancia">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+      <p><strong>Não está em São Paulo?</strong> Atendemos todo o Brasil. Você envia a armação para a gente e depois manda retirar, ou recebe de volta por courier.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PEDIDO (ASSISTENTE) ===================== -->
+<section class="orc" id="pedido">
+  <div class="wrap">
+    <div class="painel-orc">
+
+      <header class="orc-cabecalho">
+        <p class="sobrancelha">Pedido online</p>
+        <h2>Monte seu pedido <span class="destaque">em 5 passos</span></h2>
+        <p>Uma etapa de cada vez. No fim, o pedido sai pronto pro WhatsApp e a equipe confirma valor, prazo e forma de pagamento.</p>
+
+        <div class="trilha" id="trilha" aria-hidden="true">
+          <div class="trilha-item ativa"><span class="trilha-bola">1</span><span class="trilha-linha"></span></div>
+          <div class="trilha-item"><span class="trilha-bola">2</span><span class="trilha-linha"></span></div>
+          <div class="trilha-item"><span class="trilha-bola">3</span><span class="trilha-linha"></span></div>
+          <div class="trilha-item"><span class="trilha-bola">4</span><span class="trilha-linha"></span></div>
+          <div class="trilha-item"><span class="trilha-bola">5</span></div>
+        </div>
+      </header>
+
+      <!-- ETAPA 1 -->
+      <div class="passo-tela ativa" data-passo="1">
+        <div class="passo-cabecalho">
+          <span class="conta">Passo 1 de 5</span>
+          <h2>Que tipo de lente você precisa?</h2>
+          <p>Está na sua receita. Se não souber, escolha visão simples: a equipe confere na análise.</p>
+        </div>
+        <div class="opcoes" role="radiogroup" aria-label="Tipo de lente">
+          <label class="opcao"><input type="radio" name="tipo" value="Visão simples" checked><span>Visão simples<small>longe ou perto</small></span></label>
+          <label class="opcao"><input type="radio" name="tipo" value="Multifocal"><span>Multifocal<small>perto, meio e longe</small></span></label>
+          <label class="opcao"><input type="radio" name="tipo" value="Ocupacional"><span>Ocupacional<small>escritório e telas</small></span></label>
+          <label class="opcao"><input type="radio" name="tipo" value="Lente de contato"><span>Lente de contato<small>diária, quinzenal, mensal</small></span></label>
+        </div>
+
+        <p class="sub-pergunta" id="p-marca">Tem preferência de marca?</p>
+        <div class="opcoes" role="radiogroup" aria-labelledby="p-marca">
+          <label class="opcao"><input type="radio" name="marca" value="Sem preferência, quero o melhor custo-benefício" checked><span>Sem preferência</span></label>
+          <label class="opcao"><input type="radio" name="marca" value="ZEISS"><span>ZEISS</span></label>
+          <label class="opcao"><input type="radio" name="marca" value="Varilux (Essilor)"><span>Varilux</span></label>
+          <label class="opcao"><input type="radio" name="marca" value="Hoya"><span>Hoya</span></label>
+        </div>
+      </div>
+
+      <!-- ETAPA 2 -->
+      <div class="passo-tela" data-passo="2">
+        <div class="passo-cabecalho">
+          <span class="conta">Passo 2 de 5</span>
+          <h2>Quais tratamentos na lente?</h2>
+          <p>Pode marcar mais de um. Na dúvida, marque a última opção: a gente explica o que você realmente precisa.</p>
+        </div>
+        <div class="modelos" role="group" aria-label="Tratamentos da lente">
+          <label class="modelo">
+            <input type="checkbox" name="trat" value="Antirreflexo">
+            <div class="cartao">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M9 9l2 2"/></svg>
+              <div class="corpo"><strong>Antirreflexo</strong><small>Mais nitidez e estética, menos reflexo de tela e farol.</small></div>
+            </div>
+          </label>
+          <label class="modelo">
+            <input type="checkbox" name="trat" value="Filtro de luz azul">
+            <div class="cartao">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8"/></svg>
+              <div class="corpo"><strong>Filtro de luz azul</strong><small>Proteção para quem passa o dia em telas digitais.</small></div>
+            </div>
+          </label>
+          <label class="modelo">
+            <input type="checkbox" name="trat" value="Fotossensível / Transitions">
+            <div class="cartao">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+              <div class="corpo"><strong>Fotossensível / Transitions</strong><small>A lente escurece no sol e clareia em ambiente fechado.</small></div>
+            </div>
+          </label>
+          <label class="modelo">
+            <input type="checkbox" name="trat" value="Sem tratamento adicional" data-exclusivo>
+            <div class="cartao">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>
+              <div class="corpo"><strong>Sem tratamento</strong><small>Só a lente de grau, montada na sua armação.</small></div>
+            </div>
+          </label>
+          <label class="modelo">
+            <input type="checkbox" name="trat" value="Ainda não sei, quero orientação da equipe" data-exclusivo checked>
+            <div class="cartao">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5a2.5 2.5 0 013.5-1.8c1.6.7 1.3 2.6 0 3.2-.7.3-1 .8-1 1.6M12 16.5v.01"/></svg>
+              <div class="corpo"><strong>Quero orientação</strong><small>A equipe indica os tratamentos certos para a sua rotina.</small></div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- ETAPA 3 -->
+      <div class="passo-tela" data-passo="3">
+        <div class="passo-cabecalho">
+          <span class="conta">Passo 3 de 5</span>
+          <h2>E a sua armação?</h2>
+          <p>Aqui você usa a armação que quiser: a que já tem ou uma comprada em outro lugar.</p>
+        </div>
+        <div class="opcoes" role="radiogroup" aria-label="Armação">
+          <label class="opcao"><input type="radio" name="armacao" value="Já tenho a armação e levo na loja" checked><span>Já tenho<small>levo na loja</small></span></label>
+          <label class="opcao"><input type="radio" name="armacao" value="Já tenho a armação e vou enviar por courier/motoboy"><span>Já tenho<small>vou enviar por courier</small></span></label>
+          <label class="opcao"><input type="radio" name="armacao" value="Ainda vou providenciar a armação"><span>Ainda vou providenciar</span></label>
+        </div>
+        <p class="sub-pergunta" id="p-entrega">Como prefere receber o óculos pronto?</p>
+        <div class="opcoes" role="radiogroup" aria-labelledby="p-entrega">
+          <label class="opcao"><input type="radio" name="entrega" value="Retirar na loja" checked><span>Retirar na loja<small>com ajuste no rosto</small></span></label>
+          <label class="opcao"><input type="radio" name="entrega" value="Receber por courier/motoboy"><span>Receber em casa<small>courier ou motoboy</small></span></label>
+        </div>
+      </div>
+
+      <!-- ETAPA 4 -->
+      <div class="passo-tela" data-passo="4">
+        <div class="passo-cabecalho">
+          <span class="conta">Passo 4 de 5</span>
+          <h2>Agora, a sua receita</h2>
+          <p>Copie o grau como está na receita ou mande a foto dela. Campo que não existe na sua, deixe em branco.</p>
+        </div>
+
+        <p class="sub-pergunta" style="margin-top:0" id="p-data">Quando a receita foi emitida?</p>
+        <div class="opcoes" role="radiogroup" aria-labelledby="p-data">
+          <label class="opcao"><input type="radio" name="data" value="Receita emitida há menos de 60 dias" checked><span>Há menos de 60 dias</span></label>
+          <label class="opcao"><input type="radio" name="data" value="Receita com mais de 60 dias"><span>Há mais de 60 dias</span></label>
+          <label class="opcao"><input type="radio" name="data" value="Quero copiar o grau do óculos que uso"><span>Copiar o grau do meu óculos</span></label>
+        </div>
+        <p class="nota-garantia" id="nota-garantia">
+          Lentes personalizadas (digitais e multifocais) exigem receita de até 60 dias. Com receita
+          mais antiga ou grau copiado, fazemos lentes de visão simples sob sua responsabilidade: a
+          garantia cobre só defeitos de fabricação, sem cobertura de adaptação.
+        </p>
+
+        <div class="grades" style="margin-top:26px">
+          <div class="olho">
+            <h4>Olho direito (OD)</h4>
+            <div class="campos">
+              <div class="campo"><label for="od-esf">Esférico</label><select id="od-esf" data-esferico></select></div>
+              <div class="campo"><label for="od-cil">Cilíndrico</label><select id="od-cil" data-cilindrico></select></div>
+              <div class="campo"><label for="od-eixo">Eixo</label><select id="od-eixo" data-eixo></select></div>
+            </div>
+          </div>
+          <div class="olho">
+            <h4>Olho esquerdo (OE)</h4>
+            <div class="campos">
+              <div class="campo"><label for="oe-esf">Esférico</label><select id="oe-esf" data-esferico></select></div>
+              <div class="campo"><label for="oe-cil">Cilíndrico</label><select id="oe-cil" data-cilindrico></select></div>
+              <div class="campo"><label for="oe-eixo">Eixo</label><select id="oe-eixo" data-eixo></select></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="adicao">Adição (multifocal / ocupacional)</label>
+            <select id="adicao" data-adicao></select>
+          </div>
+        </div>
+
+        <p class="erro" id="erro">Informe o grau esférico de pelo menos um olho, ou escolha a foto da receita logo abaixo.</p>
+
+        <div class="receita">
+          <h4>Prefere mandar a foto da receita?</h4>
+          <p>
+            Selecione a imagem para conferir se está legível. Quando o WhatsApp abrir, anexe o
+            mesmo arquivo na conversa: a equipe faz a leitura técnica direto no documento do oftalmologista.
+          </p>
+          <label class="receita-botao" for="receita">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 16V4M8 8l4-4 4 4M5 20h14"/></svg>
+            Escolher imagem da receita
+          </label>
+          <input id="receita" type="file" accept="image/*,application/pdf" hidden>
+          <div class="receita-previa" id="receita-previa" hidden>
+            <img id="receita-img" alt="Pré-visualização da receita escolhida">
+            <div class="receita-info">
+              <strong id="receita-nome"></strong>
+              <button type="button" class="receita-remover" id="receita-remover">remover</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ETAPA 5 -->
+      <div class="passo-tela" data-passo="5">
+        <div class="passo-cabecalho">
+          <span class="conta">Passo 5 de 5</span>
+          <h2>Confira e envie</h2>
+          <p>Revise o resumo antes de mandar. Você ainda pode voltar e alterar qualquer etapa.</p>
+        </div>
+
+        <div class="revisao">
+          <dl>
+            <dt>Lente</dt><dd><span id="r-tipo">não informado</span><button class="editar" type="button" data-ir="1">alterar</button></dd>
+            <dt>Marca</dt><dd><span id="r-marca">não informado</span><button class="editar" type="button" data-ir="1">alterar</button></dd>
+            <dt>Tratamentos</dt><dd><span id="r-trat">não informado</span><button class="editar" type="button" data-ir="2">alterar</button></dd>
+            <dt>Armação</dt><dd><span id="r-armacao">não informado</span><button class="editar" type="button" data-ir="3">alterar</button></dd>
+            <dt>Entrega</dt><dd><span id="r-entrega">não informado</span><button class="editar" type="button" data-ir="3">alterar</button></dd>
+            <dt>Receita</dt><dd><span id="r-data">não informado</span><button class="editar" type="button" data-ir="4">alterar</button></dd>
+            <dt>Grau OD</dt><dd><span id="r-od">não informado</span></dd>
+            <dt>Grau OE</dt><dd><span id="r-oe">não informado</span></dd>
+            <dt>Adição</dt><dd id="r-adicao">não informado</dd>
+          </dl>
+        </div>
+
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="nome">Seu nome</label>
+            <input id="nome" type="text" placeholder="Como podemos te chamar" maxlength="60" autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="cidade">Sua cidade</label>
+            <input id="cidade" type="text" placeholder="Ex.: São Paulo – SP" maxlength="60" autocomplete="address-level2">
+          </div>
+        </div>
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="pagamento">Forma de pagamento</label>
+            <select id="pagamento">
+              <option>Parcelado em até 10x sem juros no cartão</option>
+              <option>Cartão de crédito à vista</option>
+              <option>Cartão de débito</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="obs">Observação (opcional)</label>
+            <input id="obs" type="text" placeholder="Ex.: preciso pra amanhã, dá tempo?" maxlength="120">
+          </div>
+        </div>
+
+        <div style="margin-top:26px">
+          <button class="btn btn--zap btn--grande btn--bloco" id="btn-enviar" type="button">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+            Enviar pedido pelo WhatsApp
+          </button>
+          <p class="fim-aviso">
+            A equipe confirma valor, prazo e pagamento antes de qualquer cobrança.<br>
+            Prefere ligar? <a href="tel:+551134593080" style="color:var(--azul)">(11) 3459-3080</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="orc-nav">
+        <button class="btn btn--fantasma" id="btn-voltar" type="button" hidden>Voltar</button>
+        <button class="btn btn--cheio" id="btn-continuar" type="button">Continuar</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA MEIO ===================== -->
+<section class="citacao">
+  <div class="wrap">
+    <p>Receita na mão e armação que você já ama?</p>
+    <small>Lentes de visão simples ficam prontas em até 1 hora, em até 10x sem juros.</small>
+    <div class="citacao-acoes">
+      <a class="btn btn--claro" href="#" data-zap-direto>Falar no WhatsApp</a>
+      <a class="btn btn--vazado-claro" href="tel:+551134593080">Ligar: (11) 3459-3080</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVALIAÇÕES ===================== -->
+<section class="secao" id="avaliacoes">
+  <div class="wrap centro">
+    <p class="sobrancelha">Avaliações</p>
+    <h2>Quem faz a lente aqui <span class="destaque">volta e indica</span></h2>
+    <p class="subtexto">A maior parte dos nossos clientes chega por indicação de quem já passou pela loja. Todas as avaliações abaixo são reais, com o nome de quem escreveu.</p>
+    <p class="nota-grande"><b>55</b><span>avaliações reais no Google</span></p>
+  </div>
+
+  <div class="wrap depoimentos">
+    <figure class="depoimento">
+      <blockquote>Já sou cliente há mais de 6 anos e agradeço à Marcela e sua equipe pelo lindo trabalho e atendimento, sem contar na excelência das lentes.</blockquote>
+      <figcaption><strong>Wellington Silva</strong><span>Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Excelência no atendimento, preço justo. Fiz meus óculos há 3 anos com eles e o valor das lentes continua o mesmo, estão de parabéns, voltarei mais vezes com certeza!</blockquote>
+      <figcaption><strong>Patrícia Melo Flavio</strong><span>Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Fui muitíssimo bem atendida pelo Wesley e Marcela. Minha armação ganhou lentes de grau em apenas 1 hora, e o resultado tem qualidade ímpar!</blockquote>
+      <figcaption><strong>Nina Grando</strong><span>Local Guide · Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Fiz a confecção de lentes com antirreflexo e filtro azul para três óculos e tive uma experiência excelente. O atendimento foi super rápido e a equipe esclareceu todas as minhas dúvidas.</blockquote>
+      <figcaption><strong>Bruno Yoshiaki</strong><span>Local Guide · Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Ela foi extremamente educada, atenciosa e paciente, nos apresentou todas as opções disponíveis e tirou todas as nossas dúvidas.</blockquote>
+      <figcaption><strong>Olivia Oliveira</strong><span>Local Guide · Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Fiz os meus óculos recentemente nesse lugar e eu gostei demais. Qualidade excelente, preço justo e atendimento muito bom. Ficou pronto em 1h!</blockquote>
+      <figcaption><strong>Larissa Vieira</strong><span>Avaliação no Google</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== HISTÓRIA / MISSÃO / VALORES ===================== -->
+<section class="secao secao--nevoa" id="historia">
+  <div class="wrap duas">
+    <div>
+      <p class="sobrancelha">Nossa história</p>
+      <h2>Nascemos para <span class="destaque">desmistificar o mercado óptico</span></h2>
+      <p class="subtexto">
+        Mais de 13 anos de bagagem no mercado óptico, no coração financeiro de São Paulo, com o
+        mesmo propósito desde o começo: entregar clareza visual, velocidade e precisão para
+        quem precisa ver o mundo melhor.
+      </p>
+
+      <ol class="linha-tempo">
+        <li class="marco">
+          <span class="marco-ano">O começo</span>
+          <p>A Paulista Lentes começa como uma ótica tradicional e identifica uma grande ineficiência no setor: o cliente pagava caro por margens embutidas na armação.</p>
+        </li>
+        <li class="marco marco--forte">
+          <span class="marco-ano">2014</span>
+          <p><strong>A virada para o Lens-Only.</strong> A empresa passa a focar exclusivamente em lentes: o cliente traz a própria receita e a armação que preferir, e recebe uma consultoria 100% dedicada à melhor tecnologia, com entrega rápida e custo justo.</p>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">Mais de uma década</span>
+          <p>Parcerias sólidas com os maiores laboratórios ópticos do mundo, como Zeiss, Essilor, Hoya e Johnson &amp; Johnson, e acesso às tecnologias mais avançadas em antirreflexo, multifocais digitais e proteção contra luz azul.</p>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">Hoje</span>
+          <p>Mais de 50 mil clientes atendidos, na galeria Boulevard Monti Mare e no atendimento consultivo do Edifício Louis Pasteur, ambos na Av. Paulista, e expandindo para todo o Brasil.</p>
+        </li>
+      </ol>
+    </div>
+    <div class="moldura">
+      <div class="moldura-corte">
+        <img class="img-moldura" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/AdobeStock_409912149-scaled.jpeg" alt="Atendimento na Paulista Lentes" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap mvv">
+    <div class="mvv-bloco">
+      <h3>Missão</h3>
+      <p>Desmistificar e democratizar a alta tecnologia em lentes oftálmicas, oferecendo consultoria técnica personalizada, transparência de preços e extrema agilidade na entrega, garantindo a melhor saúde visual sem a obrigatoriedade da compra de armações.</p>
+    </div>
+    <div class="mvv-bloco mvv-bloco--claro">
+      <h3>Visão</h3>
+      <p>Ser reconhecida como a maior referência em consultoria e fornecimento exclusivo de lentes oftálmicas no Brasil e internacionalmente, transformando a experiência de compra do consumidor com automação, precisão técnica e parcerias com os maiores laboratórios ópticos do mundo.</p>
+    </div>
+  </div>
+
+  <div class="wrap valores">
+    <div class="valor">
+      <h3>Transparência e preço justo</h3>
+      <p>Sem margens abusivas, com foco em orientar sobre a real necessidade do seu grau.</p>
+    </div>
+    <div class="valor">
+      <h3>Agilidade operacional</h3>
+      <p>Respeito ao seu tempo, com fluxos rápidos do orçamento ao óculos pronto.</p>
+    </div>
+    <div class="valor">
+      <h3>Rigor e precisão técnica</h3>
+      <p>Marcas globais de excelência e aferição precisa das medidas visuais.</p>
+    </div>
+    <div class="valor">
+      <h3>Foco no cliente</h3>
+      <p>Liberdade para usar a armação que quiser, focando no que importa: as lentes.</p>
+    </div>
+    <div class="valor">
+      <h3>Inovação contínua</h3>
+      <p>Busca constante por novas tecnologias ópticas, processos melhores e novos mercados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GARANTIA ===================== -->
+<section class="secao" id="garantia">
+  <div class="wrap centro">
+    <p class="sobrancelha">Garantia</p>
+    <h2>Garantia clara, <span class="destaque">seguindo os laboratórios</span></h2>
+    <p class="subtexto">Trabalhamos direto com Essilor, Zeiss e Hoya e seguimos à risca os protocolos de validação de receita, para proteger a sua saúde visual.</p>
+
+    <div class="garantias">
+      <div class="garantia">
+        <h3>Lentes surfaçadas</h3>
+        <p class="garantia-sub">Personalizadas e digitais, como as multifocais.</p>
+        <ul class="lista-check">
+          <li><strong>Receita de até 60 dias.</strong> Os laboratórios exigem receita recente e não aceitamos pedidos fora desse prazo.</li>
+          <li><strong>3 meses de garantia de adaptação</strong>, contados da data da receita. Se o médico precisar ajustar o grau, o laboratório refaz as lentes sem custo de fabricação.</li>
+          <li><strong>Garantia de fabricação</strong> contra defeitos de tratamento, conforme o termo de cada fabricante e linha.</li>
+        </ul>
+      </div>
+      <div class="garantia">
+        <h3>Lentes de visão simples</h3>
+        <p class="garantia-sub">Pronta entrega, para leitura ou longe.</p>
+        <ul class="lista-check">
+          <li><strong>Com receita de até 60 dias:</strong> garantia de fabricação normalmente.</li>
+          <li><strong>Com receita acima de 60 dias ou grau copiado</strong> de um óculos em uso, o pedido é feito sob responsabilidade do cliente.</li>
+          <li>Nesse caso, a garantia cobre só <strong>defeitos de fabricação</strong>, como trincas ou descascamento do antirreflexo, sem cobertura de adaptação ou erro médico.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="secao secao--nevoa" id="duvidas">
+  <div class="wrap centro">
+    <p class="sobrancelha">Perguntas frequentes</p>
+    <h2>Antes de pedir, tire as <span class="destaque">dúvidas mais comuns</span></h2>
+    <p class="subtexto">Se não encontrar sua pergunta aqui, chame no WhatsApp.</p>
+
+    <div class="faq">
+      <details open>
+        <summary>Quanto tempo demora pra ficar pronto?</summary>
+        <p>Lentes de visão simples ficam prontas em até 1 hora, porque temos laboratório próprio com 3 máquinas facetadoras. Lentes personalizadas, como as multifocais, são produzidas no laboratório parceiro com prioridade no fluxo, e você recebe o prazo exato na ordem de serviço.</p>
+      </details>
+      <details>
+        <summary>Preciso comprar a armação com vocês?</summary>
+        <p>Não. Esse é o nosso modelo Lens-Only: você traz a armação que já tem, ou que comprou em outro lugar, e a gente cuida só das lentes. Assim você não paga margem embutida em armação.</p>
+      </details>
+      <details>
+        <summary>Por que o preço é mais baixo que em outras óticas?</summary>
+        <p>Porque trabalhamos só com lentes e com laboratório próprio. Sem margem de armação no meio, o preço fica em média 30% abaixo do mercado, com as mesmas marcas: ZEISS, Varilux, Hoya e Johnson &amp; Johnson.</p>
+      </details>
+      <details>
+        <summary>Dá pra parcelar?</summary>
+        <p>Sim. Todos os produtos podem ser parcelados em até 10x sem juros no cartão de crédito. Também aceitamos débito e pagamento por aproximação. Na aprovação do pedido, o pagamento pode ser de 50% ou do valor integral.</p>
+      </details>
+      <details>
+        <summary>Vocês aceitam receita feita em outro lugar?</summary>
+        <p>Sim, de qualquer oftalmologista. Para lentes personalizadas, a receita precisa ter sido emitida há no máximo 60 dias, que é a exigência dos laboratórios.</p>
+      </details>
+      <details>
+        <summary>Não moro em São Paulo. Consigo fazer minhas lentes com vocês?</summary>
+        <p>Sim, atendemos todo o Brasil. Você manda a foto da receita pelo WhatsApp, envia a armação para a gente e recebe o óculos pronto por courier ou manda alguém retirar.</p>
+      </details>
+      <details>
+        <summary>Como funciona a garantia?</summary>
+        <p>Lentes personalizadas têm 3 meses de garantia de adaptação a partir da data da receita, mais a garantia de fabricação de cada marca. Lentes de visão simples feitas com receita antiga ou grau copiado têm garantia só contra defeitos de fabricação. Os detalhes estão na seção <a href="#garantia" style="color:var(--azul);text-decoration:underline">Garantia</a>.</p>
+      </details>
+      <details>
+        <summary>Preciso agendar horário?</summary>
+        <p>Não precisa. Na loja do Boulevard Monti Mare o atendimento é por ordem de chegada. Se preferir, mande a receita antes pelo WhatsApp e já chegue com o orçamento pronto.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<section class="secao" id="contato">
+  <div class="wrap centro">
+    <p class="sobrancelha">Contato</p>
+    <h2>Fale com a <span class="destaque">Paulista Lentes</span></h2>
+    <p class="subtexto">WhatsApp, telefone e endereço: escolha o jeito mais fácil pra você.</p>
+  </div>
+
+  <div class="wrap contato-grade">
+    <div class="contato-bloco">
+      <h3>Endereço</h3>
+      <p>
+        Av. Paulista, 392 – loja 147<br>
+        Boulevard Monti Mare<br>
+        Cerqueira César, São Paulo – SP<br>
+        01310-000
+      </p>
+      <p class="contato-dica">A poucos minutos a pé da estação Brigadeiro do metrô.</p>
+      <p>Também fazemos atendimento consultivo no Edifício Louis Pasteur, na Av. Paulista.</p>
+      <a class="btn btn--linha" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Paulista,+392+-+loja+147,+São+Paulo" target="_blank" rel="noopener">Ver rota no Maps</a>
+    </div>
+
+    <div class="contato-bloco">
+      <h3>Horário da loja</h3>
+      <table class="horarios">
+        <tr><th scope="row">Segunda a sexta</th><td>10h às 18h</td></tr>
+        <tr><th scope="row">Sábado</th><td>10h às 15h</td></tr>
+        <tr><th scope="row">Domingo</th><td>Fechado</td></tr>
+      </table>
+      <h3 style="margin-top:26px">Telefone e WhatsApp</h3>
+      <p><a class="tel-grande" href="tel:+551134593080">(11) 3459-3080</a></p>
+      <div class="contato-acoes">
+        <a class="btn btn--zap" href="#" data-zap-direto>Chamar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="contato-bloco">
+      <h3>Formas de pagamento</h3>
+      <ul class="lista-check">
+        <li><strong>Até 10x sem juros</strong> no cartão de crédito</li>
+        <li>Cartão de débito</li>
+        <li>Aproximação (NFC)</li>
+      </ul>
+      <h3 style="margin-top:26px">Estrutura da loja</h3>
+      <ul class="lista-check">
+        <li>Entrada com acessibilidade para cadeira de rodas</li>
+        <li>Estacionamento coberto, descoberto e no local</li>
+        <li>Envio e retirada por courier para todo o Brasil</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="mapa-caixa">
+      <iframe
+        src="https://www.google.com/maps?q=Paulista+Lentes,+Av.+Paulista,+392+-+loja+147,+Bela+Vista,+S%C3%A3o+Paulo+-+SP,+01310-000&output=embed"
+        title="Localização da Paulista Lentes na Av. Paulista, 392"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<svg class="skyline skyline--sobre-azul" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 64V40h40V26h28v14h34V18h30v22h44V30h26v10h38V12h32v28h46V24h28v16h40V34h30v6h44V20h30v20h42V28h28v12h40V16h32v24h44V32h26v8h40V22h30v18h44V36h28v4h40V26h30v14h40v24z"/>
+</svg>
+<section class="cta-final">
+  <div class="wrap">
+    <div>
+      <h2>Sua armação merece a lente certa</h2>
+      <p>Mande a foto da receita e receba o orçamento pelo WhatsApp. Até 10x sem juros.</p>
+    </div>
+    <div class="acoes">
+      <a class="btn btn--claro" href="#pedido">Fazer meu pedido</a>
+      <a class="btn btn--vazado-claro" href="tel:+551134593080">Ligar agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="wrap rodape-colunas">
+    <div>
+      <img class="logo-rodape" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/Sem-nome-1350-x-1080-px-scaled.png" alt="Paulista Lentes" loading="lazy">
+      <p style="margin-top:18px;max-width:34ch">
+        Consultoria em lentes oftalmológicas no modelo Lens-Only, na Av. Paulista desde 2014.
+        Top 100 Embaixador ZEISS Brasil, ZEISS Vision Expert e Varilux Especialista Select.
+      </p>
+    </div>
+    <div>
+      <h4>Lentes</h4>
+      <ul>
+        <li><a href="#servicos">Visão simples</a></li>
+        <li><a href="#servicos">Multifocais</a></li>
+        <li><a href="#servicos">Ocupacionais</a></li>
+        <li><a href="#servicos">Lentes de contato</a></li>
+        <li><a href="#servicos">Tratamentos premium</a></li>
+        <li><a href="#precos">Preços</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#lens-only">O que é Lens-Only</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#garantia">Garantia</a></li>
+        <li><a href="#historia">Nossa história</a></li>
+        <li><a href="#duvidas">Dúvidas frequentes</a></li>
+        <li><a href="#pedido">Fazer pedido</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Onde estamos</h4>
+      <ul>
+        <li>Av. Paulista, 392 – loja 147</li>
+        <li>Boulevard Monti Mare</li>
+        <li>Cerqueira César, São Paulo – SP</li>
+        <li><a href="tel:+551134593080">(11) 3459-3080</a></li>
+        <li><a href="#" data-zap-direto>WhatsApp</a></li>
+        <li>Seg a sex, 10h–18h · Sáb, 10h–15h</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap rodape-base">
+    <span>© <span id="ano"></span> Paulista Lentes</span>
+    <span>Atendemos todo o Brasil · Até 10x sem juros</span>
+  </div>
+</footer>
+
+<a class="zap-flutua" href="#" data-zap-direto aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+/* =========================================================
+   CONFIGURAÇÃO - troque o número aqui e pronto.
+   Vale para o assistente, os cartões de preço e os botões diretos.
+   Formato: 55 + DDD + número, só dígitos.
+   ========================================================= */
+const WHATSAPP = "5511999999999";
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+/* ---------- menu mobile ---------- */
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+menuBtn.addEventListener("click", () => {
+  const aberto = menu.classList.toggle("aberto");
+  menuBtn.setAttribute("aria-expanded", aberto);
+});
+menu.querySelectorAll("a").forEach(a =>
+  a.addEventListener("click", () => {
+    menu.classList.remove("aberto");
+    menuBtn.setAttribute("aria-expanded", "false");
+  })
+);
+
+/* ---------- WhatsApp ---------- */
+function abrirZap(texto) {
+  window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto), "_blank", "noopener");
+}
+document.querySelectorAll("[data-zap-direto]").forEach(el =>
+  el.addEventListener("click", e => {
+    e.preventDefault();
+    abrirZap("Olá! Vim pelo site da Paulista Lentes e gostaria de fazer um orçamento de lentes.");
+  })
+);
+document.querySelectorAll("[data-zap-produto]").forEach(el =>
+  el.addEventListener("click", e => {
+    e.preventDefault();
+    abrirZap(
+      "Olá! Vim pelo site da Paulista Lentes e quero pedir: " + el.dataset.zapProduto +
+      ".\n\nVou enviar a foto da minha receita aqui na conversa."
+    );
+  })
+);
+
+/* ---------- opções de grau ---------- */
+const fmt = n => (n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(n).toFixed(2).replace(".", ",");
+function preencher(select, valores, vazio) {
+  const frag = document.createDocumentFragment();
+  frag.appendChild(new Option(vazio, ""));
+  valores.forEach(v => frag.appendChild(new Option(v.rotulo, v.valor)));
+  select.appendChild(frag);
+}
+function faixa(inicio, fim, passo) {
+  const out = [], c = 100;
+  for (let n = Math.round(inicio * c); n <= Math.round(fim * c); n += Math.round(passo * c)) {
+    const v = n / c;
+    out.push({ valor: v.toFixed(2), rotulo: fmt(v) });
+  }
+  return out;
+}
+const eixos = Array.from({ length: 181 }, (_, i) => ({ valor: String(i), rotulo: i + "°" }));
+document.querySelectorAll("[data-esferico]").forEach(s => preencher(s, faixa(-12, 12, 0.25).reverse(), "Sem grau"));
+document.querySelectorAll("[data-cilindrico]").forEach(s => preencher(s, faixa(-6, 0, 0.25).reverse(), "Sem cilíndrico"));
+document.querySelectorAll("[data-eixo]").forEach(s => preencher(s, eixos, "Sem eixo"));
+preencher(document.querySelector("[data-adicao]"), faixa(0.75, 3.5, 0.25), "Não tenho adição");
+
+/* ---------- leitura dos campos ---------- */
+const rot = id => {
+  const s = document.getElementById(id);
+  return s.value ? s.options[s.selectedIndex].text : "";
+};
+const selecionado = nome => {
+  const el = document.querySelector('input[name="' + nome + '"]:checked');
+  return el ? el.value : "";
+};
+const tratamentos = () =>
+  Array.from(document.querySelectorAll('input[name="trat"]:checked')).map(i => i.value);
+function grauOlho(prefixo) {
+  const esf = rot(prefixo + "-esf"), cil = rot(prefixo + "-cil"), eixo = rot(prefixo + "-eixo");
+  if (!esf && !cil) return "";
+  const partes = ["esférico " + (esf || "0,00")];
+  if (cil) partes.push("cilíndrico " + cil + (eixo ? " eixo " + eixo : ""));
+  return partes.join(", ");
+}
+const ehContato = () => selecionado("tipo") === "Lente de contato";
+
+/* ---------- tratamentos: "sem tratamento" e "quero orientação" são exclusivos ---------- */
+const checks = Array.from(document.querySelectorAll('input[name="trat"]'));
+checks.forEach(c =>
+  c.addEventListener("change", () => {
+    if (!c.checked) return;
+    if (c.hasAttribute("data-exclusivo")) {
+      checks.forEach(o => { if (o !== c) o.checked = false; });
+    } else {
+      checks.forEach(o => { if (o.hasAttribute("data-exclusivo")) o.checked = false; });
+    }
+  })
+);
+
+/* ---------- aviso de garantia conforme a data da receita ---------- */
+const notaGarantia = document.getElementById("nota-garantia");
+document.querySelectorAll('input[name="data"]').forEach(r =>
+  r.addEventListener("change", () =>
+    notaGarantia.classList.toggle("visivel", selecionado("data") !== "Receita emitida há menos de 60 dias")
+  )
+);
+
+/* =========================================================
+   NAVEGAÇÃO ENTRE ETAPAS
+   Lente de contato pula tratamentos (2) e armação (3).
+   ========================================================= */
+const telas = Array.from(document.querySelectorAll(".passo-tela"));
+const itensTrilha = Array.from(document.querySelectorAll(".trilha-item"));
+const btnVoltar = document.getElementById("btn-voltar");
+const btnContinuar = document.getElementById("btn-continuar");
+const erro = document.getElementById("erro");
+const TOTAL = telas.length;
+let atual = 1;
+let temReceita = false;
+
+const pulado = n => ehContato() && (n === 2 || n === 3);
+
+function mostrar(n, rolar = true) {
+  atual = n;
+  telas.forEach(t => t.classList.toggle("ativa", Number(t.dataset.passo) === n));
+  itensTrilha.forEach((item, i) => {
+    item.classList.toggle("ativa", i + 1 === n);
+    item.classList.toggle("feita", i + 1 < n);
+  });
+  btnVoltar.hidden = n === 1;
+  btnContinuar.hidden = n === TOTAL;
+  if (n === TOTAL) revisar();
+  if (rolar) {
+    const painel = document.querySelector(".painel-orc");
+    const y = painel.getBoundingClientRect().top + window.scrollY - 140;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}
+
+function validar(n) {
+  if (n === 4) {
+    const ok = !!(grauOlho("od") || grauOlho("oe") || temReceita);
+    erro.classList.toggle("visivel", !ok);
+    if (!ok) document.getElementById("od-esf").focus();
+    return ok;
+  }
+  return true;
+}
+
+btnContinuar.addEventListener("click", () => {
+  if (!validar(atual)) return;
+  let prox = atual + 1;
+  while (prox < TOTAL && pulado(prox)) prox++;
+  mostrar(prox);
+});
+btnVoltar.addEventListener("click", () => {
+  let ant = atual - 1;
+  while (ant > 1 && pulado(ant)) ant--;
+  mostrar(ant);
+});
+document.querySelectorAll(".editar").forEach(b =>
+  b.addEventListener("click", () => {
+    const alvo = Number(b.dataset.ir);
+    mostrar(pulado(alvo) ? 1 : alvo);
+  })
+);
+document.querySelectorAll("[data-esferico],[data-cilindrico]").forEach(s =>
+  s.addEventListener("change", () => {
+    if (grauOlho("od") || grauOlho("oe")) erro.classList.remove("visivel");
+  })
+);
+
+/* ---------- foto da receita ---------- */
+const receita = document.getElementById("receita");
+const receitaPrevia = document.getElementById("receita-previa");
+const receitaImg = document.getElementById("receita-img");
+const receitaNome = document.getElementById("receita-nome");
+
+receita.addEventListener("change", () => {
+  const arq = receita.files && receita.files[0];
+  if (!arq) return;
+  receitaNome.textContent = arq.name;
+  temReceita = true;
+  erro.classList.remove("visivel");
+  if (arq.type.startsWith("image/")) {
+    receitaImg.src = URL.createObjectURL(arq);
+    receitaImg.hidden = false;
+  } else {
+    receitaImg.hidden = true;
+  }
+  receitaPrevia.hidden = false;
+});
+document.getElementById("receita-remover").addEventListener("click", () => {
+  receita.value = "";
+  receitaPrevia.hidden = true;
+  temReceita = false;
+});
+
+/* ---------- revisão final ---------- */
+function revisar() {
+  const contato = ehContato();
+  const set = (id, v) => (document.getElementById(id).textContent = v);
+  set("r-tipo", selecionado("tipo") || "não informado");
+  set("r-marca", selecionado("marca") || "não informado");
+  set("r-trat", contato ? "não se aplica" : (tratamentos().join(", ") || "não informado"));
+  set("r-armacao", contato ? "não se aplica" : (selecionado("armacao") || "não informado"));
+  set("r-entrega", contato ? "a combinar" : (selecionado("entrega") || "não informado"));
+  set("r-data", selecionado("data") || "não informado");
+  set("r-od", grauOlho("od") || (temReceita ? "na foto da receita" : "sem grau"));
+  set("r-oe", grauOlho("oe") || (temReceita ? "na foto da receita" : "sem grau"));
+  set("r-adicao", rot("adicao") || "não informado");
+}
+
+/* ---------- envio do pedido ---------- */
+document.getElementById("btn-enviar").addEventListener("click", () => {
+  const od = grauOlho("od"), oe = grauOlho("oe");
+  if (!od && !oe && !temReceita) { mostrar(4); validar(4); return; }
+
+  const contato = ehContato();
+  const nome = document.getElementById("nome").value.trim();
+  const cidade = document.getElementById("cidade").value.trim();
+  const obs = document.getElementById("obs").value.trim();
+  const pagamento = document.getElementById("pagamento").value;
+  const adicao = rot("adicao");
+
+  const l = [];
+  l.push("Olá! Vim pelo site da Paulista Lentes e quero fazer um pedido.");
+  l.push("");
+  l.push("• Lente: " + selecionado("tipo"));
+  l.push("• Marca: " + selecionado("marca"));
+  if (!contato) {
+    l.push("• Tratamentos: " + (tratamentos().join(", ") || "não informado"));
+    l.push("• Armação: " + selecionado("armacao"));
+    l.push("• Entrega: " + selecionado("entrega"));
+  }
+  l.push("• " + selecionado("data"));
+  l.push("");
+  l.push("Grau:");
+  l.push("• OD: " + (od || (temReceita ? "ver foto da receita" : "sem grau")));
+  l.push("• OE: " + (oe || (temReceita ? "ver foto da receita" : "sem grau")));
+  if (adicao) l.push("• Adição: " + adicao);
+  l.push("");
+  l.push("Pagamento: " + pagamento);
+  if (nome) l.push("Nome: " + nome);
+  if (cidade) l.push("Cidade: " + cidade);
+  if (obs) l.push("Observação: " + obs);
+  if (temReceita) {
+    l.push("");
+    l.push("Vou anexar a foto da minha receita aqui na conversa.");
+  }
+  abrirZap(l.join("\n"));
+});
+
+mostrar(1, false);
+</script>
+</body>
+</html>
