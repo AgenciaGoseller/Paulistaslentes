@@ -484,6 +484,32 @@ h3{font-size:1.15rem;font-weight:500}
 .menu a[aria-current="page"]{color:var(--azul);border-bottom-color:var(--azul)}
 .menu a.menu-cta[aria-current="page"]{color:#fff;box-shadow:0 0 0 3px rgba(31,168,85,.25)}
 
+/* ---------- páginas legais ---------- */
+.legal{max-width:760px;margin:0 auto}
+.legal-cabeca{padding-bottom:28px;margin-bottom:12px;border-bottom:1px solid var(--linha)}
+.legal-cabeca h1{font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.12}
+.legal-data{color:var(--cinza);font-size:.86rem;margin:0}
+.legal-indice{background:var(--nevoa);border:1px solid var(--linha);border-radius:var(--raio);padding:20px 24px;margin:28px 0 8px}
+.legal-indice p{font-family:var(--display);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--azul);margin:0 0 10px}
+.legal-indice ol{margin:0;padding-left:20px;columns:2;column-gap:32px;font-size:.9rem;color:var(--cinza)}
+.legal-indice li{break-inside:avoid;padding:2px 0}
+.legal-corpo .legal-indice a{color:inherit;text-decoration:none}
+.legal-corpo .legal-indice a:hover{color:var(--azul)}
+.legal-corpo h2{font-size:1.3rem;font-weight:400;line-height:1.3;margin:44px 0 12px;scroll-margin-top:calc(var(--h-cabecalho) + var(--h-faixa) + 16px)}
+.legal-corpo h2 span{color:var(--azul);font-weight:500;margin-right:8px}
+.legal-corpo p,.legal-corpo li{color:#2E3640;max-width:68ch}
+.legal-corpo p{margin:0 0 14px}
+.legal-corpo ul{margin:0 0 14px;padding-left:22px;display:grid;gap:6px}
+.legal-corpo li::marker{color:var(--azul)}
+.legal-corpo a{color:var(--azul);text-decoration:underline;text-underline-offset:2px}
+.legal-contato{background:var(--azul-gelo);border-radius:var(--raio);padding:22px 24px;margin:8px 0 14px;display:grid;gap:4px}
+.legal-contato p{margin:0}
+.legal-nota{font-size:.86rem;color:var(--cinza);border-left:2px solid var(--azul);padding-left:14px}
+.pendente{background:#FFF3C4;color:inherit;padding:0 4px;border-radius:3px}
+.rodape-legal{display:flex;gap:18px;flex-wrap:wrap}
+.fim-aviso .link-legal{color:var(--azul);text-decoration:underline;text-underline-offset:2px}
+@media (max-width:560px){.legal-indice ol{columns:1}}
+
 /* ---------- atalhos da página inicial ---------- */
 .atalhos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;text-align:left}
 .atalho{
@@ -1466,6 +1492,7 @@ h3{font-size:1.15rem;font-weight:500}
           </button>
           <p class="fim-aviso">
             A equipe confirma valor, prazo e pagamento antes de qualquer cobrança.<br>
+            Ao enviar, você concorda com a <a class="link-legal" href="/politica-de-privacidade">Política de Privacidade</a>.<br>
             Prefere ligar? <a href="tel:+551134593080" style="color:var(--azul)">(11) 3459-3080</a>
           </p>
         </div>
@@ -1480,6 +1507,165 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
+</div>
+
+<!-- ##################### PÁGINA: POLITICA-DE-PRIVACIDADE ##################### -->
+<div class="pagina" data-pagina="politica-de-privacidade">
+<section class="secao">
+  <div class="wrap">
+    <article class="legal">
+    <header class="legal-cabeca">
+      <p class="sobrancelha">Privacidade</p>
+      <h1>Política de <span class="destaque">Privacidade</span></h1>
+      <p class="legal-data">Última atualização: 27 de setembro de 2026</p>
+    </header>
+    <div class="legal-corpo">
+      <p class="legal-nota">Resumo: o Site não tem cadastro nem guarda formulários. O que você preenche vira uma mensagem de WhatsApp, e só chega até nós se você enviar.</p>
+      <nav class="legal-indice" aria-label="Nesta página">
+        <p>Nesta página</p>
+        <ol>
+          <li><a href="#politica-de-privacidade-1">Introdução</a></li>
+          <li><a href="#politica-de-privacidade-2">Dados que coletamos</a></li>
+          <li><a href="#politica-de-privacidade-3">Finalidade do tratamento</a></li>
+          <li><a href="#politica-de-privacidade-4">Base legal (LGPD)</a></li>
+          <li><a href="#politica-de-privacidade-5">Compartilhamento de dados</a></li>
+          <li><a href="#politica-de-privacidade-6">Cookies e serviços de terceiros</a></li>
+          <li><a href="#politica-de-privacidade-7">Armazenamento e segurança</a></li>
+          <li><a href="#politica-de-privacidade-8">Direitos do titular dos dados</a></li>
+          <li><a href="#politica-de-privacidade-9">Alterações desta Política</a></li>
+          <li><a href="#politica-de-privacidade-10">Contato</a></li>
+        </ol>
+      </nav>
+      <h2 id="politica-de-privacidade-1"><span>1.</span>Introdução</h2>
+      <p>Esta Política de Privacidade descreve como a Paulista Lentes (<mark class="pendente">Razão social</mark>, <mark class="pendente">CNPJ 00.000.000/0000-00</mark>), doravante “nós”, coleta, usa, armazena e protege os dados pessoais de quem usa o site paulistaslentes.pages.dev (“Site”), em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+      <p>Ao utilizar o Site, você concorda com as práticas descritas nesta Política.</p>
+      <h2 id="politica-de-privacidade-2"><span>2.</span>Dados que coletamos</h2>
+      <p>O Site não tem cadastro, login nem banco de dados próprio. Os dados chegam até nós quando você decide falar com a gente:</p>
+      <ul>
+        <li><strong>Dados do pedido:</strong> tipo de lente, marca, tratamentos, forma de entrega e pagamento, nome, cidade e observações preenchidos no formulário “Fazer pedido”. Esses dados montam uma mensagem que só é enviada quando você toca em “Enviar pedido pelo WhatsApp”.</li>
+        <li><strong>Dados de saúde visual:</strong> o grau da receita (esférico, cilíndrico, eixo e adição) e a foto da receita que você anexa na conversa. Pela LGPD, são dados pessoais sensíveis e recebem cuidado redobrado.</li>
+        <li><strong>Dados de comunicação:</strong> mensagens, telefone e nome de perfil enviados pelo WhatsApp ou por ligação.</li>
+        <li><strong>Dados técnicos de navegação:</strong> endereço IP e informações do navegador, registrados automaticamente pela hospedagem do Site e pelos serviços de terceiros descritos no item 6.</li>
+      </ul>
+      <p>A foto da receita escolhida no formulário não é enviada pelo Site: ela só chega até nós se você a anexar na conversa do WhatsApp.</p>
+      <h2 id="politica-de-privacidade-3"><span>3.</span>Finalidade do tratamento</h2>
+      <p>Usamos os dados para:</p>
+      <ul>
+        <li>Responder dúvidas e preparar orçamentos;</li>
+        <li>Validar a receita e fabricar as lentes junto aos laboratórios parceiros (ZEISS, Essilor e Hoya);</li>
+        <li>Combinar pagamento, entrega e ajuste das lentes;</li>
+        <li>Acionar garantias de adaptação e de fabricação;</li>
+        <li>Enviar comunicações sobre produtos e serviços, somente quando você autorizar;</li>
+        <li>Cumprir obrigações legais, fiscais e regulatórias.</li>
+      </ul>
+      <h2 id="politica-de-privacidade-4"><span>4.</span>Base legal (LGPD)</h2>
+      <p>Tratamos dados pessoais com base no consentimento do titular, na execução de contrato ou de procedimentos preliminares a ele (como o orçamento), no legítimo interesse e no cumprimento de obrigação legal.</p>
+      <p>Os dados de saúde visual são tratados com base no seu consentimento, dado ao enviar a receita para a fabricação das lentes, e no cumprimento de obrigação legal ou regulatória, conforme o art. 11 da LGPD.</p>
+      <h2 id="politica-de-privacidade-5"><span>5.</span>Compartilhamento de dados</h2>
+      <p>Não vendemos dados pessoais. Compartilhamos apenas o necessário com:</p>
+      <ul>
+        <li><strong>Laboratórios fabricantes</strong> (ZEISS, Essilor e Hoya), que recebem o grau e as medidas para produzir as lentes;</li>
+        <li><strong>Empresas de entrega</strong> (courier ou motoboy), quando você escolhe receber em casa;</li>
+        <li><strong>Prestadores de tecnologia</strong> que apoiam o Site e o atendimento, como hospedagem (Cloudflare) e mensagens (WhatsApp, da Meta);</li>
+        <li><strong>Autoridades públicas</strong>, quando exigido por lei ou ordem judicial.</li>
+      </ul>
+      <h2 id="politica-de-privacidade-6"><span>6.</span>Cookies e serviços de terceiros</h2>
+      <p>O Site não usa cookies próprios nem ferramentas de publicidade ou de análise de audiência. Alguns recursos, porém, são carregados de terceiros, que podem registrar dados técnicos ou usar cookies conforme as próprias políticas:</p>
+      <ul>
+        <li><strong>Google Maps</strong>, no mapa da página Contato;</li>
+        <li><strong>Google Fonts</strong>, que carrega as fontes do Site;</li>
+        <li><strong>WhatsApp</strong>, ao abrir uma conversa pelos botões do Site;</li>
+        <li><strong>Cloudflare</strong>, que hospeda o Site e protege contra acessos maliciosos.</li>
+      </ul>
+      <p>Você pode bloquear ou apagar cookies nas configurações do navegador. Isso pode afetar alguns recursos, como o mapa.</p>
+      <h2 id="politica-de-privacidade-7"><span>7.</span>Armazenamento e segurança</h2>
+      <p>Adotamos medidas técnicas e administrativas razoáveis para proteger os dados pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida. O acesso às receitas fica restrito à equipe que cuida do seu pedido.</p>
+      <p>Guardamos os dados pelo tempo necessário para as finalidades desta Política, incluindo o período de garantia das lentes, ou pelo prazo exigido por lei.</p>
+      <h2 id="politica-de-privacidade-8"><span>8.</span>Direitos do titular dos dados</h2>
+      <p>Pela LGPD, você pode:</p>
+      <ul>
+        <li>Confirmar se tratamos seus dados;</li>
+        <li>Acessar seus dados;</li>
+        <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+        <li>Pedir anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+        <li>Pedir a portabilidade dos dados;</li>
+        <li>Revogar o consentimento a qualquer momento;</li>
+        <li>Saber com quem compartilhamos seus dados.</li>
+      </ul>
+      <p>Para exercer esses direitos, escreva para <mark class="pendente">email@paulistalentes.com.br</mark> ou fale com a gente pelo <a href="#" data-zap-direto>WhatsApp</a>.</p>
+      <h2 id="politica-de-privacidade-9"><span>9.</span>Alterações desta Política</h2>
+      <p>Esta Política pode ser atualizada periodicamente. A versão vigente fica sempre nesta página, com a data da última atualização indicada no topo.</p>
+      <h2 id="politica-de-privacidade-10"><span>10.</span>Contato</h2>
+      <p>Dúvidas sobre esta Política ou sobre o tratamento dos seus dados:</p>
+      <div class="legal-contato">
+        <p><strong>Paulista Lentes</strong> · <mark class="pendente">Razão social</mark></p>
+        <p>Av. Paulista, 392 – loja 147, Boulevard Monti Mare, Cerqueira César, São Paulo – SP</p>
+        <p>E-mail: <mark class="pendente">email@paulistalentes.com.br</mark></p>
+        <p>Telefone: <a href="tel:+551134593080">(11) 3459-3080</a> · <a href="#" data-zap-direto>WhatsApp</a></p>
+        <p>Encarregado de Dados (DPO): <mark class="pendente">Nome do encarregado</mark></p>
+      </div>
+    </div>
+    </article>
+  </div>
+</section>
+</div>
+
+<!-- ##################### PÁGINA: TERMOS-DE-USO ##################### -->
+<div class="pagina" data-pagina="termos-de-uso">
+<section class="secao">
+  <div class="wrap">
+    <article class="legal">
+    <header class="legal-cabeca">
+      <p class="sobrancelha">Termos</p>
+      <h1>Termos de <span class="destaque">Uso</span></h1>
+      <p class="legal-data">Última atualização: 27 de setembro de 2026</p>
+    </header>
+    <div class="legal-corpo">
+      <p class="legal-nota">Resumo: o Site serve para conhecer a Paulista Lentes e montar um pedido. Preço e prazo finais são sempre confirmados pela equipe antes de qualquer cobrança.</p>
+      <nav class="legal-indice" aria-label="Nesta página">
+        <p>Nesta página</p>
+        <ol>
+          <li><a href="#termos-de-uso-1">Aceitação dos Termos</a></li>
+          <li><a href="#termos-de-uso-2">Sobre o serviço</a></li>
+          <li><a href="#termos-de-uso-3">Preços, receitas e garantias</a></li>
+          <li><a href="#termos-de-uso-4">Uso do Site</a></li>
+          <li><a href="#termos-de-uso-5">Propriedade intelectual</a></li>
+          <li><a href="#termos-de-uso-6">Limitação de responsabilidade</a></li>
+          <li><a href="#termos-de-uso-7">Links para terceiros</a></li>
+          <li><a href="#termos-de-uso-8">Privacidade</a></li>
+          <li><a href="#termos-de-uso-9">Alterações destes Termos</a></li>
+          <li><a href="#termos-de-uso-10">Legislação aplicável e foro</a></li>
+          <li><a href="#termos-de-uso-11">Contato</a></li>
+        </ol>
+      </nav>
+      <h2 id="termos-de-uso-1"><span>1.</span>Aceitação dos Termos</h2>
+      <p>Ao acessar e usar o site paulistaslentes.pages.dev (“Site”), de titularidade da Paulista Lentes (<mark class="pendente">Razão social</mark>, <mark class="pendente">CNPJ 00.000.000/0000-00</mark>), você concorda com estes Termos de Uso. Se não concordar, recomendamos que não use o Site.</p>
+      <h2 id="termos-de-uso-2"><span>2.</span>Sobre o serviço</h2>
+      <p>O Site apresenta informações institucionais, lentes, tratamentos, preços e serviços da Paulista Lentes, e permite montar um pedido para envio pelo WhatsApp.</p>
+      <p>O pedido enviado pelo Site é uma solicitação de orçamento, não uma compra concluída. A equipe confirma valor, prazo e forma de pagamento antes de qualquer cobrança.</p>
+      <h2 id="termos-de-uso-3"><span>3.</span>Preços, receitas e garantias</h2>
+      <p>Os preços exibidos são referências e podem mudar sem aviso. O valor final depende da análise técnica da receita, do tipo de lente e dos tratamentos escolhidos.</p>
+      <p>As informações de grau digitadas no formulário e a receita enviada são de responsabilidade de quem as envia. As regras de validade da receita e de garantia estão na página <a href="/garantia">Garantia e dúvidas</a>.</p>
+      <h2 id="termos-de-uso-4"><span>4.</span>Uso do Site</h2>
+      <p>Você concorda em usar o Site de forma lícita, sem violar direitos de terceiros nem praticar atos que prejudiquem seu funcionamento, segurança ou integridade.</p>
+      <h2 id="termos-de-uso-5"><span>5.</span>Propriedade intelectual</h2>
+      <p>Todo o conteúdo do Site, como textos, imagens, logotipos e demais materiais, pertence à Paulista Lentes ou a terceiros licenciantes e é protegido por leis de propriedade intelectual. As marcas ZEISS, Varilux, Essilor e Hoya pertencem aos respectivos titulares. É proibida a reprodução ou o uso sem autorização prévia.</p>
+      <h2 id="termos-de-uso-6"><span>6.</span>Limitação de responsabilidade</h2>
+      <p>A Paulista Lentes se esforça para manter as informações do Site atualizadas e precisas, mas não garante ausência de erros, interrupções ou disponibilidade contínua. O uso do Site é de responsabilidade do usuário.</p>
+      <h2 id="termos-de-uso-7"><span>7.</span>Links para terceiros</h2>
+      <p>O Site contém links e recursos de terceiros, como WhatsApp e Google Maps. Não nos responsabilizamos pelo conteúdo, pelas práticas de privacidade ou pela disponibilidade desses serviços.</p>
+      <h2 id="termos-de-uso-8"><span>8.</span>Privacidade</h2>
+      <p>O tratamento dos seus dados pessoais segue a nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+      <h2 id="termos-de-uso-9"><span>9.</span>Alterações destes Termos</h2>
+      <p>Estes Termos podem ser alterados a qualquer momento. A versão vigente fica sempre disponível nesta página.</p>
+      <h2 id="termos-de-uso-10"><span>10.</span>Legislação aplicável e foro</h2>
+      <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de São Paulo/SP para resolver quaisquer controvérsias, com renúncia a qualquer outro, por mais privilegiado que seja, ressalvado o direito do consumidor de propor ação no foro do seu domicílio.</p>
+      <h2 id="termos-de-uso-11"><span>11.</span>Contato</h2>
+      <p>Dúvidas sobre estes Termos podem ser enviadas para <mark class="pendente">email@paulistalentes.com.br</mark>, pelo telefone <a href="tel:+551134593080">(11) 3459-3080</a> ou pelo <a href="#" data-zap-direto>WhatsApp</a>.</p>
+    </div>
+    </article>
+  </div>
+</section>
 </div>
 
 </main>
@@ -1548,6 +1734,7 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
   <div class="wrap rodape-base">
     <span>© <span id="ano"></span> Paulista Lentes</span>
+    <span class="rodape-legal"><a href="/politica-de-privacidade">Política de Privacidade</a><a href="/termos-de-uso">Termos de Uso</a></span>
     <span>Atendemos todo o Brasil · Até 10x sem juros</span>
   </div>
 </footer>
@@ -1825,7 +2012,9 @@ const TITULOS = {
   "garantia": "Garantia e dúvidas | Paulista Lentes",
   "historia": "Nossa história | Paulista Lentes",
   "contato": "Contato | Paulista Lentes",
-  "pedido": "Fazer pedido | Paulista Lentes"
+  "pedido": "Fazer pedido | Paulista Lentes",
+  "politica-de-privacidade": "Política de Privacidade | Paulista Lentes",
+  "termos-de-uso": "Termos de Uso | Paulista Lentes"
 };
 const paginas = Array.from(document.querySelectorAll(".pagina"));
 const caminho = nome => (nome === "inicio" ? "/" : "/" + nome);
@@ -1835,8 +2024,12 @@ function paginaAtual() {
   return TITULOS[nome] ? nome : "inicio";
 }
 
+let paginaAberta = null;
 function abrirPagina() {
   const nome = paginaAtual();
+  /* âncora dentro da mesma página (ex.: índice das páginas legais): só rola até ela */
+  if (nome === paginaAberta && location.hash) return;
+  paginaAberta = nome;
   paginas.forEach(p => p.classList.toggle("ativa", p.dataset.pagina === nome));
   menu.querySelectorAll("a").forEach(a => {
     if (a.getAttribute("href") === caminho(nome)) a.setAttribute("aria-current", "page");
@@ -1844,7 +2037,9 @@ function abrirPagina() {
   });
   document.title = TITULOS[nome];
   if (nome === "pedido") mostrar(atual, false);
-  window.scrollTo({ top: 0, behavior: "auto" });
+  const alvo = location.hash && document.getElementById(location.hash.slice(1));
+  if (alvo) alvo.scrollIntoView();
+  else window.scrollTo({ top: 0, behavior: "auto" });
 }
 
 document.addEventListener("click", e => {
@@ -1853,7 +2048,7 @@ document.addEventListener("click", e => {
   const nome = a.getAttribute("href").replace(/^\/+|\/+$/g, "") || "inicio";
   if (!TITULOS[nome]) return;
   e.preventDefault();
-  if (location.pathname !== caminho(nome)) history.pushState(null, "", caminho(nome));
+  if (location.pathname !== caminho(nome) || location.hash) history.pushState(null, "", caminho(nome));
   abrirPagina();
 });
 window.addEventListener("popstate", abrirPagina);
