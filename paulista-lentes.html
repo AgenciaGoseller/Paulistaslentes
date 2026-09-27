@@ -42,7 +42,6 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--azul);outline-offset:2px;border-radius:4px}
-[id]{scroll-margin-top:140px}
 
 /* ---------------------------------------------------------
    BLINDAGEM DE FONTE (WordPress / Elementor)
@@ -56,7 +55,7 @@ h1, h2, h3, h4, h5, h6,
 .btn, .sobrancelha, .menu a, .stat b, .passo-num, .nota-grande b,
 .tel-grande, .olho h4, .rodape h4, .modelo .corpo strong, .citacao p,
 .preco-valor, .preco-valor span, .selo strong, .marcas li, .marco-ano,
-.servico-num, .trilha-bola, .passo-cabecalho .conta, .mvv h3{
+.servico-num, .trilha-bola, .atalho strong, .passo-cabecalho .conta, .mvv h3{
   font-family:'Montserrat', system-ui, -apple-system, sans-serif !important;
 }
 
@@ -479,6 +478,28 @@ h3{font-size:1.15rem;font-weight:500}
 .zap-flutua:hover{transform:scale(1.06)}
 .zap-flutua svg{width:30px;height:30px;fill:#fff}
 
+/* ---------- páginas (uma aba por vez) ---------- */
+.pagina{display:none}
+.pagina.ativa{display:block;animation:entra .25s ease}
+.menu a[aria-current="page"]{color:var(--azul);border-bottom-color:var(--azul)}
+.menu a.menu-cta[aria-current="page"]{color:#fff;box-shadow:0 0 0 3px rgba(31,168,85,.25)}
+
+/* ---------- atalhos da página inicial ---------- */
+.atalhos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;text-align:left}
+.atalho{
+  display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--linha);
+  border-radius:14px;padding:28px 26px;transition:border-color .2s,box-shadow .2s;
+}
+.atalho:hover{border-color:var(--azul);box-shadow:0 14px 34px rgba(14,42,68,.10)}
+.atalho strong{font-size:1.1rem;font-weight:500;color:var(--tinta)}
+.atalho span{color:var(--cinza);font-size:.92rem;flex:1}
+.atalho em{font-style:normal;color:var(--azul);font-size:.86rem;font-weight:600;margin-top:8px}
+.atalho--marcado{background:var(--azul-noite);border-color:var(--azul-noite)}
+.atalho--marcado strong{color:#fff}
+.atalho--marcado span{color:#C7DDF1}
+.atalho--marcado em{color:#6FB4EE}
+@media (max-width:940px){.atalhos{grid-template-columns:1fr}}
+
 /* ---------- responsivo ---------- */
 @media (max-width:1080px){
   .menu{gap:18px}
@@ -559,7 +580,7 @@ h3{font-size:1.15rem;font-weight:500}
 
 <header class="cabecalho">
   <div class="wrap">
-    <a class="marca" href="#" aria-label="Paulista Lentes, página inicial">
+    <a class="marca" href="#inicio" aria-label="Paulista Lentes, página inicial">
       <img class="logo-topo" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/Sem-nome-1350-x-1080-px-scaled.png" alt="Paulista Lentes">
     </a>
     <nav class="menu" id="menu">
@@ -567,7 +588,7 @@ h3{font-size:1.15rem;font-weight:500}
       <a href="#precos">Preços</a>
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#garantia">Garantia</a>
+      <a href="#garantia">Garantia e dúvidas</a>
       <a href="#historia">Nossa história</a>
       <a href="#contato">Contato</a>
       <a class="menu-cta" href="#pedido">Fazer pedido</a>
@@ -581,6 +602,10 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </header>
 
+<main id="paginas">
+
+<!-- ##################### PÁGINA: INICIO ##################### -->
+<div class="pagina" data-pagina="inicio">
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <img class="hero-img" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/banner501-1.jpg" alt="Pessoa usando óculos com lentes da Paulista Lentes">
@@ -654,8 +679,87 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
+<!-- ===================== ATALHOS (INÍCIO) ===================== -->
+<section class="secao secao--nevoa">
+  <div class="wrap centro">
+    <p class="sobrancelha">Por onde começar</p>
+    <h2>Lente certa, <span class="destaque">sem pagar pela armação</span></h2>
+    <p class="subtexto">Entenda o modelo, veja os preços e mande seu pedido pelo WhatsApp.</p>
+    <div class="atalhos">
+      <a class="atalho" href="#lens-only">
+        <strong>O que é Lens-Only</strong>
+        <span>Você traz a receita e a armação. A gente cuida só das lentes.</span>
+        <em>Conhecer o modelo</em>
+      </a>
+      <a class="atalho" href="#precos">
+        <strong>Preços</strong>
+        <span>Visão simples a partir de R$ 80,00, pronta em até 1 hora.</span>
+        <em>Ver preços</em>
+      </a>
+      <a class="atalho atalho--marcado" href="#pedido">
+        <strong>Fazer pedido</strong>
+        <span>Monte seu pedido em 5 passos e envie pelo WhatsApp.</span>
+        <em>Começar agora</em>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVALIAÇÕES ===================== -->
+<section class="secao">
+  <div class="wrap centro">
+    <p class="sobrancelha">Avaliações</p>
+    <h2>Quem faz a lente aqui <span class="destaque">volta e indica</span></h2>
+    <p class="subtexto">A maior parte dos nossos clientes chega por indicação de quem já passou pela loja. Todas as avaliações abaixo são reais, com o nome de quem escreveu.</p>
+    <p class="nota-grande"><b>55</b><span>avaliações reais no Google</span></p>
+  </div>
+
+  <div class="wrap depoimentos">
+    <figure class="depoimento">
+      <blockquote>Já sou cliente há mais de 6 anos e agradeço à Marcela e sua equipe pelo lindo trabalho e atendimento, sem contar na excelência das lentes.</blockquote>
+      <figcaption><strong>Wellington Silva</strong><span>Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Excelência no atendimento, preço justo. Fiz meus óculos há 3 anos com eles e o valor das lentes continua o mesmo, estão de parabéns, voltarei mais vezes com certeza!</blockquote>
+      <figcaption><strong>Patrícia Melo Flavio</strong><span>Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Fui muitíssimo bem atendida pelo Wesley e Marcela. Minha armação ganhou lentes de grau em apenas 1 hora, e o resultado tem qualidade ímpar!</blockquote>
+      <figcaption><strong>Nina Grando</strong><span>Local Guide · Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Fiz a confecção de lentes com antirreflexo e filtro azul para três óculos e tive uma experiência excelente. O atendimento foi super rápido e a equipe esclareceu todas as minhas dúvidas.</blockquote>
+      <figcaption><strong>Bruno Yoshiaki</strong><span>Local Guide · Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Ela foi extremamente educada, atenciosa e paciente, nos apresentou todas as opções disponíveis e tirou todas as nossas dúvidas.</blockquote>
+      <figcaption><strong>Olivia Oliveira</strong><span>Local Guide · Avaliação no Google</span></figcaption>
+    </figure>
+    <figure class="depoimento">
+      <blockquote>Fiz os meus óculos recentemente nesse lugar e eu gostei demais. Qualidade excelente, preço justo e atendimento muito bom. Ficou pronto em 1h!</blockquote>
+      <figcaption><strong>Larissa Vieira</strong><span>Avaliação no Google</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== CTA MEIO ===================== -->
+<section class="citacao">
+  <div class="wrap">
+    <p>Receita na mão e armação que você já ama?</p>
+    <small>Lentes de visão simples ficam prontas em até 1 hora, em até 10x sem juros.</small>
+    <div class="citacao-acoes">
+      <a class="btn btn--claro" href="#" data-zap-direto>Falar no WhatsApp</a>
+      <a class="btn btn--vazado-claro" href="tel:+551134593080">Ligar: (11) 3459-3080</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ##################### PÁGINA: LENS-ONLY ##################### -->
+<div class="pagina" data-pagina="lens-only">
 <!-- ===================== LENS-ONLY ===================== -->
-<section class="secao" id="lens-only">
+<section class="secao">
   <div class="wrap duas">
     <div>
       <p class="sobrancelha">O modelo Lens-Only</p>
@@ -689,8 +793,12 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
+</div>
+
+<!-- ##################### PÁGINA: PRECOS ##################### -->
+<div class="pagina" data-pagina="precos">
 <!-- ===================== PREÇOS ===================== -->
-<section class="secao secao--nevoa" id="precos">
+<section class="secao secao--nevoa">
   <div class="wrap centro">
     <p class="sobrancelha">Mais procurados</p>
     <h2>Preço claro, <span class="destaque">em até 10x sem juros</span></h2>
@@ -747,8 +855,12 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
+</div>
+
+<!-- ##################### PÁGINA: SERVICOS ##################### -->
+<div class="pagina" data-pagina="servicos">
 <!-- ===================== SERVIÇOS ===================== -->
-<section class="secao" id="servicos">
+<section class="secao">
   <div class="wrap centro">
     <p class="sobrancelha">Serviços</p>
     <h2>Tudo sobre lentes, <span class="destaque">em um só lugar</span></h2>
@@ -853,8 +965,12 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
+</div>
+
+<!-- ##################### PÁGINA: COMO-FUNCIONA ##################### -->
+<div class="pagina" data-pagina="como-funciona">
 <!-- ===================== COMO FUNCIONA ===================== -->
-<section class="secao secao--nevoa" id="como-funciona">
+<section class="secao secao--nevoa">
   <div class="wrap centro">
     <p class="sobrancelha">Como funciona</p>
     <h2>Da receita ao óculos pronto, <span class="destaque">em 5 etapas</span></h2>
@@ -895,8 +1011,233 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
+</div>
+
+<!-- ##################### PÁGINA: GARANTIA ##################### -->
+<div class="pagina" data-pagina="garantia">
+<!-- ===================== GARANTIA ===================== -->
+<section class="secao">
+  <div class="wrap centro">
+    <p class="sobrancelha">Garantia</p>
+    <h2>Garantia clara, <span class="destaque">seguindo os laboratórios</span></h2>
+    <p class="subtexto">Trabalhamos direto com Essilor, Zeiss e Hoya e seguimos à risca os protocolos de validação de receita, para proteger a sua saúde visual.</p>
+
+    <div class="garantias">
+      <div class="garantia">
+        <h3>Lentes surfaçadas</h3>
+        <p class="garantia-sub">Personalizadas e digitais, como as multifocais.</p>
+        <ul class="lista-check">
+          <li><strong>Receita de até 60 dias.</strong> Os laboratórios exigem receita recente e não aceitamos pedidos fora desse prazo.</li>
+          <li><strong>3 meses de garantia de adaptação</strong>, contados da data da receita. Se o médico precisar ajustar o grau, o laboratório refaz as lentes sem custo de fabricação.</li>
+          <li><strong>Garantia de fabricação</strong> contra defeitos de tratamento, conforme o termo de cada fabricante e linha.</li>
+        </ul>
+      </div>
+      <div class="garantia">
+        <h3>Lentes de visão simples</h3>
+        <p class="garantia-sub">Pronta entrega, para leitura ou longe.</p>
+        <ul class="lista-check">
+          <li><strong>Com receita de até 60 dias:</strong> garantia de fabricação normalmente.</li>
+          <li><strong>Com receita acima de 60 dias ou grau copiado</strong> de um óculos em uso, o pedido é feito sob responsabilidade do cliente.</li>
+          <li>Nesse caso, a garantia cobre só <strong>defeitos de fabricação</strong>, como trincas ou descascamento do antirreflexo, sem cobertura de adaptação ou erro médico.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="secao secao--nevoa">
+  <div class="wrap centro">
+    <p class="sobrancelha">Perguntas frequentes</p>
+    <h2>Antes de pedir, tire as <span class="destaque">dúvidas mais comuns</span></h2>
+    <p class="subtexto">Se não encontrar sua pergunta aqui, chame no WhatsApp.</p>
+
+    <div class="faq">
+      <details open>
+        <summary>Quanto tempo demora pra ficar pronto?</summary>
+        <p>Lentes de visão simples ficam prontas em até 1 hora, porque temos laboratório próprio com 3 máquinas facetadoras. Lentes personalizadas, como as multifocais, são produzidas no laboratório parceiro com prioridade no fluxo, e você recebe o prazo exato na ordem de serviço.</p>
+      </details>
+      <details>
+        <summary>Preciso comprar a armação com vocês?</summary>
+        <p>Não. Esse é o nosso modelo Lens-Only: você traz a armação que já tem, ou que comprou em outro lugar, e a gente cuida só das lentes. Assim você não paga margem embutida em armação.</p>
+      </details>
+      <details>
+        <summary>Por que o preço é mais baixo que em outras óticas?</summary>
+        <p>Porque trabalhamos só com lentes e com laboratório próprio. Sem margem de armação no meio, o preço fica em média 30% abaixo do mercado, com as mesmas marcas: ZEISS, Varilux, Hoya e Johnson &amp; Johnson.</p>
+      </details>
+      <details>
+        <summary>Dá pra parcelar?</summary>
+        <p>Sim. Todos os produtos podem ser parcelados em até 10x sem juros no cartão de crédito. Também aceitamos débito e pagamento por aproximação. Na aprovação do pedido, o pagamento pode ser de 50% ou do valor integral.</p>
+      </details>
+      <details>
+        <summary>Vocês aceitam receita feita em outro lugar?</summary>
+        <p>Sim, de qualquer oftalmologista. Para lentes personalizadas, a receita precisa ter sido emitida há no máximo 60 dias, que é a exigência dos laboratórios.</p>
+      </details>
+      <details>
+        <summary>Não moro em São Paulo. Consigo fazer minhas lentes com vocês?</summary>
+        <p>Sim, atendemos todo o Brasil. Você manda a foto da receita pelo WhatsApp, envia a armação para a gente e recebe o óculos pronto por courier ou manda alguém retirar.</p>
+      </details>
+      <details>
+        <summary>Como funciona a garantia?</summary>
+        <p>Lentes personalizadas têm 3 meses de garantia de adaptação a partir da data da receita, mais a garantia de fabricação de cada marca. Lentes de visão simples feitas com receita antiga ou grau copiado têm garantia só contra defeitos de fabricação. Os detalhes estão no topo desta página.</p>
+      </details>
+      <details>
+        <summary>Preciso agendar horário?</summary>
+        <p>Não precisa. Na loja do Boulevard Monti Mare o atendimento é por ordem de chegada. Se preferir, mande a receita antes pelo WhatsApp e já chegue com o orçamento pronto.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ##################### PÁGINA: HISTORIA ##################### -->
+<div class="pagina" data-pagina="historia">
+<!-- ===================== HISTÓRIA / MISSÃO / VALORES ===================== -->
+<section class="secao secao--nevoa">
+  <div class="wrap duas">
+    <div>
+      <p class="sobrancelha">Nossa história</p>
+      <h2>Nascemos para <span class="destaque">desmistificar o mercado óptico</span></h2>
+      <p class="subtexto">
+        Mais de 13 anos de bagagem no mercado óptico, no coração financeiro de São Paulo, com o
+        mesmo propósito desde o começo: entregar clareza visual, velocidade e precisão para
+        quem precisa ver o mundo melhor.
+      </p>
+
+      <ol class="linha-tempo">
+        <li class="marco">
+          <span class="marco-ano">O começo</span>
+          <p>A Paulista Lentes começa como uma ótica tradicional e identifica uma grande ineficiência no setor: o cliente pagava caro por margens embutidas na armação.</p>
+        </li>
+        <li class="marco marco--forte">
+          <span class="marco-ano">2014</span>
+          <p><strong>A virada para o Lens-Only.</strong> A empresa passa a focar exclusivamente em lentes: o cliente traz a própria receita e a armação que preferir, e recebe uma consultoria 100% dedicada à melhor tecnologia, com entrega rápida e custo justo.</p>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">Mais de uma década</span>
+          <p>Parcerias sólidas com os maiores laboratórios ópticos do mundo, como Zeiss, Essilor, Hoya e Johnson &amp; Johnson, e acesso às tecnologias mais avançadas em antirreflexo, multifocais digitais e proteção contra luz azul.</p>
+        </li>
+        <li class="marco">
+          <span class="marco-ano">Hoje</span>
+          <p>Mais de 50 mil clientes atendidos, na galeria Boulevard Monti Mare e no atendimento consultivo do Edifício Louis Pasteur, ambos na Av. Paulista, e expandindo para todo o Brasil.</p>
+        </li>
+      </ol>
+    </div>
+    <div class="moldura">
+      <div class="moldura-corte">
+        <img class="img-moldura" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/AdobeStock_409912149-scaled.jpeg" alt="Atendimento na Paulista Lentes" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap mvv">
+    <div class="mvv-bloco">
+      <h3>Missão</h3>
+      <p>Desmistificar e democratizar a alta tecnologia em lentes oftálmicas, oferecendo consultoria técnica personalizada, transparência de preços e extrema agilidade na entrega, garantindo a melhor saúde visual sem a obrigatoriedade da compra de armações.</p>
+    </div>
+    <div class="mvv-bloco mvv-bloco--claro">
+      <h3>Visão</h3>
+      <p>Ser reconhecida como a maior referência em consultoria e fornecimento exclusivo de lentes oftálmicas no Brasil e internacionalmente, transformando a experiência de compra do consumidor com automação, precisão técnica e parcerias com os maiores laboratórios ópticos do mundo.</p>
+    </div>
+  </div>
+
+  <div class="wrap valores">
+    <div class="valor">
+      <h3>Transparência e preço justo</h3>
+      <p>Sem margens abusivas, com foco em orientar sobre a real necessidade do seu grau.</p>
+    </div>
+    <div class="valor">
+      <h3>Agilidade operacional</h3>
+      <p>Respeito ao seu tempo, com fluxos rápidos do orçamento ao óculos pronto.</p>
+    </div>
+    <div class="valor">
+      <h3>Rigor e precisão técnica</h3>
+      <p>Marcas globais de excelência e aferição precisa das medidas visuais.</p>
+    </div>
+    <div class="valor">
+      <h3>Foco no cliente</h3>
+      <p>Liberdade para usar a armação que quiser, focando no que importa: as lentes.</p>
+    </div>
+    <div class="valor">
+      <h3>Inovação contínua</h3>
+      <p>Busca constante por novas tecnologias ópticas, processos melhores e novos mercados.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ##################### PÁGINA: CONTATO ##################### -->
+<div class="pagina" data-pagina="contato">
+<!-- ===================== CONTATO ===================== -->
+<section class="secao">
+  <div class="wrap centro">
+    <p class="sobrancelha">Contato</p>
+    <h2>Fale com a <span class="destaque">Paulista Lentes</span></h2>
+    <p class="subtexto">WhatsApp, telefone e endereço: escolha o jeito mais fácil pra você.</p>
+  </div>
+
+  <div class="wrap contato-grade">
+    <div class="contato-bloco">
+      <h3>Endereço</h3>
+      <p>
+        Av. Paulista, 392 – loja 147<br>
+        Boulevard Monti Mare<br>
+        Cerqueira César, São Paulo – SP<br>
+        01310-000
+      </p>
+      <p class="contato-dica">A poucos minutos a pé da estação Brigadeiro do metrô.</p>
+      <p>Também fazemos atendimento consultivo no Edifício Louis Pasteur, na Av. Paulista.</p>
+      <a class="btn btn--linha" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Paulista,+392+-+loja+147,+São+Paulo" target="_blank" rel="noopener">Ver rota no Maps</a>
+    </div>
+
+    <div class="contato-bloco">
+      <h3>Horário da loja</h3>
+      <table class="horarios">
+        <tr><th scope="row">Segunda a sexta</th><td>10h às 18h</td></tr>
+        <tr><th scope="row">Sábado</th><td>10h às 15h</td></tr>
+        <tr><th scope="row">Domingo</th><td>Fechado</td></tr>
+      </table>
+      <h3 style="margin-top:26px">Telefone e WhatsApp</h3>
+      <p><a class="tel-grande" href="tel:+551134593080">(11) 3459-3080</a></p>
+      <div class="contato-acoes">
+        <a class="btn btn--zap" href="#" data-zap-direto>Chamar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="contato-bloco">
+      <h3>Formas de pagamento</h3>
+      <ul class="lista-check">
+        <li><strong>Até 10x sem juros</strong> no cartão de crédito</li>
+        <li>Cartão de débito</li>
+        <li>Aproximação (NFC)</li>
+      </ul>
+      <h3 style="margin-top:26px">Estrutura da loja</h3>
+      <ul class="lista-check">
+        <li>Entrada com acessibilidade para cadeira de rodas</li>
+        <li>Estacionamento coberto, descoberto e no local</li>
+        <li>Envio e retirada por courier para todo o Brasil</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="mapa-caixa">
+      <iframe
+        src="https://www.google.com/maps?q=Paulista+Lentes,+Av.+Paulista,+392+-+loja+147,+Bela+Vista,+S%C3%A3o+Paulo+-+SP,+01310-000&output=embed"
+        title="Localização da Paulista Lentes na Av. Paulista, 392"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ##################### PÁGINA: PEDIDO ##################### -->
+<div class="pagina" data-pagina="pedido">
 <!-- ===================== PEDIDO (ASSISTENTE) ===================== -->
-<section class="orc" id="pedido">
+<section class="orc">
   <div class="wrap">
     <div class="painel-orc">
 
@@ -1139,263 +1480,9 @@ h3{font-size:1.15rem;font-weight:500}
   </div>
 </section>
 
-<!-- ===================== CTA MEIO ===================== -->
-<section class="citacao">
-  <div class="wrap">
-    <p>Receita na mão e armação que você já ama?</p>
-    <small>Lentes de visão simples ficam prontas em até 1 hora, em até 10x sem juros.</small>
-    <div class="citacao-acoes">
-      <a class="btn btn--claro" href="#" data-zap-direto>Falar no WhatsApp</a>
-      <a class="btn btn--vazado-claro" href="tel:+551134593080">Ligar: (11) 3459-3080</a>
-    </div>
-  </div>
-</section>
+</div>
 
-<!-- ===================== AVALIAÇÕES ===================== -->
-<section class="secao" id="avaliacoes">
-  <div class="wrap centro">
-    <p class="sobrancelha">Avaliações</p>
-    <h2>Quem faz a lente aqui <span class="destaque">volta e indica</span></h2>
-    <p class="subtexto">A maior parte dos nossos clientes chega por indicação de quem já passou pela loja. Todas as avaliações abaixo são reais, com o nome de quem escreveu.</p>
-    <p class="nota-grande"><b>55</b><span>avaliações reais no Google</span></p>
-  </div>
-
-  <div class="wrap depoimentos">
-    <figure class="depoimento">
-      <blockquote>Já sou cliente há mais de 6 anos e agradeço à Marcela e sua equipe pelo lindo trabalho e atendimento, sem contar na excelência das lentes.</blockquote>
-      <figcaption><strong>Wellington Silva</strong><span>Avaliação no Google</span></figcaption>
-    </figure>
-    <figure class="depoimento">
-      <blockquote>Excelência no atendimento, preço justo. Fiz meus óculos há 3 anos com eles e o valor das lentes continua o mesmo, estão de parabéns, voltarei mais vezes com certeza!</blockquote>
-      <figcaption><strong>Patrícia Melo Flavio</strong><span>Avaliação no Google</span></figcaption>
-    </figure>
-    <figure class="depoimento">
-      <blockquote>Fui muitíssimo bem atendida pelo Wesley e Marcela. Minha armação ganhou lentes de grau em apenas 1 hora, e o resultado tem qualidade ímpar!</blockquote>
-      <figcaption><strong>Nina Grando</strong><span>Local Guide · Avaliação no Google</span></figcaption>
-    </figure>
-    <figure class="depoimento">
-      <blockquote>Fiz a confecção de lentes com antirreflexo e filtro azul para três óculos e tive uma experiência excelente. O atendimento foi super rápido e a equipe esclareceu todas as minhas dúvidas.</blockquote>
-      <figcaption><strong>Bruno Yoshiaki</strong><span>Local Guide · Avaliação no Google</span></figcaption>
-    </figure>
-    <figure class="depoimento">
-      <blockquote>Ela foi extremamente educada, atenciosa e paciente, nos apresentou todas as opções disponíveis e tirou todas as nossas dúvidas.</blockquote>
-      <figcaption><strong>Olivia Oliveira</strong><span>Local Guide · Avaliação no Google</span></figcaption>
-    </figure>
-    <figure class="depoimento">
-      <blockquote>Fiz os meus óculos recentemente nesse lugar e eu gostei demais. Qualidade excelente, preço justo e atendimento muito bom. Ficou pronto em 1h!</blockquote>
-      <figcaption><strong>Larissa Vieira</strong><span>Avaliação no Google</span></figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- ===================== HISTÓRIA / MISSÃO / VALORES ===================== -->
-<section class="secao secao--nevoa" id="historia">
-  <div class="wrap duas">
-    <div>
-      <p class="sobrancelha">Nossa história</p>
-      <h2>Nascemos para <span class="destaque">desmistificar o mercado óptico</span></h2>
-      <p class="subtexto">
-        Mais de 13 anos de bagagem no mercado óptico, no coração financeiro de São Paulo, com o
-        mesmo propósito desde o começo: entregar clareza visual, velocidade e precisão para
-        quem precisa ver o mundo melhor.
-      </p>
-
-      <ol class="linha-tempo">
-        <li class="marco">
-          <span class="marco-ano">O começo</span>
-          <p>A Paulista Lentes começa como uma ótica tradicional e identifica uma grande ineficiência no setor: o cliente pagava caro por margens embutidas na armação.</p>
-        </li>
-        <li class="marco marco--forte">
-          <span class="marco-ano">2014</span>
-          <p><strong>A virada para o Lens-Only.</strong> A empresa passa a focar exclusivamente em lentes: o cliente traz a própria receita e a armação que preferir, e recebe uma consultoria 100% dedicada à melhor tecnologia, com entrega rápida e custo justo.</p>
-        </li>
-        <li class="marco">
-          <span class="marco-ano">Mais de uma década</span>
-          <p>Parcerias sólidas com os maiores laboratórios ópticos do mundo, como Zeiss, Essilor, Hoya e Johnson &amp; Johnson, e acesso às tecnologias mais avançadas em antirreflexo, multifocais digitais e proteção contra luz azul.</p>
-        </li>
-        <li class="marco">
-          <span class="marco-ano">Hoje</span>
-          <p>Mais de 50 mil clientes atendidos, na galeria Boulevard Monti Mare e no atendimento consultivo do Edifício Louis Pasteur, ambos na Av. Paulista, e expandindo para todo o Brasil.</p>
-        </li>
-      </ol>
-    </div>
-    <div class="moldura">
-      <div class="moldura-corte">
-        <img class="img-moldura" src="https://trabalhosba.belasartes.edu.br/n06/wp-content/uploads/2026/09/AdobeStock_409912149-scaled.jpeg" alt="Atendimento na Paulista Lentes" loading="lazy">
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap mvv">
-    <div class="mvv-bloco">
-      <h3>Missão</h3>
-      <p>Desmistificar e democratizar a alta tecnologia em lentes oftálmicas, oferecendo consultoria técnica personalizada, transparência de preços e extrema agilidade na entrega, garantindo a melhor saúde visual sem a obrigatoriedade da compra de armações.</p>
-    </div>
-    <div class="mvv-bloco mvv-bloco--claro">
-      <h3>Visão</h3>
-      <p>Ser reconhecida como a maior referência em consultoria e fornecimento exclusivo de lentes oftálmicas no Brasil e internacionalmente, transformando a experiência de compra do consumidor com automação, precisão técnica e parcerias com os maiores laboratórios ópticos do mundo.</p>
-    </div>
-  </div>
-
-  <div class="wrap valores">
-    <div class="valor">
-      <h3>Transparência e preço justo</h3>
-      <p>Sem margens abusivas, com foco em orientar sobre a real necessidade do seu grau.</p>
-    </div>
-    <div class="valor">
-      <h3>Agilidade operacional</h3>
-      <p>Respeito ao seu tempo, com fluxos rápidos do orçamento ao óculos pronto.</p>
-    </div>
-    <div class="valor">
-      <h3>Rigor e precisão técnica</h3>
-      <p>Marcas globais de excelência e aferição precisa das medidas visuais.</p>
-    </div>
-    <div class="valor">
-      <h3>Foco no cliente</h3>
-      <p>Liberdade para usar a armação que quiser, focando no que importa: as lentes.</p>
-    </div>
-    <div class="valor">
-      <h3>Inovação contínua</h3>
-      <p>Busca constante por novas tecnologias ópticas, processos melhores e novos mercados.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== GARANTIA ===================== -->
-<section class="secao" id="garantia">
-  <div class="wrap centro">
-    <p class="sobrancelha">Garantia</p>
-    <h2>Garantia clara, <span class="destaque">seguindo os laboratórios</span></h2>
-    <p class="subtexto">Trabalhamos direto com Essilor, Zeiss e Hoya e seguimos à risca os protocolos de validação de receita, para proteger a sua saúde visual.</p>
-
-    <div class="garantias">
-      <div class="garantia">
-        <h3>Lentes surfaçadas</h3>
-        <p class="garantia-sub">Personalizadas e digitais, como as multifocais.</p>
-        <ul class="lista-check">
-          <li><strong>Receita de até 60 dias.</strong> Os laboratórios exigem receita recente e não aceitamos pedidos fora desse prazo.</li>
-          <li><strong>3 meses de garantia de adaptação</strong>, contados da data da receita. Se o médico precisar ajustar o grau, o laboratório refaz as lentes sem custo de fabricação.</li>
-          <li><strong>Garantia de fabricação</strong> contra defeitos de tratamento, conforme o termo de cada fabricante e linha.</li>
-        </ul>
-      </div>
-      <div class="garantia">
-        <h3>Lentes de visão simples</h3>
-        <p class="garantia-sub">Pronta entrega, para leitura ou longe.</p>
-        <ul class="lista-check">
-          <li><strong>Com receita de até 60 dias:</strong> garantia de fabricação normalmente.</li>
-          <li><strong>Com receita acima de 60 dias ou grau copiado</strong> de um óculos em uso, o pedido é feito sob responsabilidade do cliente.</li>
-          <li>Nesse caso, a garantia cobre só <strong>defeitos de fabricação</strong>, como trincas ou descascamento do antirreflexo, sem cobertura de adaptação ou erro médico.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FAQ ===================== -->
-<section class="secao secao--nevoa" id="duvidas">
-  <div class="wrap centro">
-    <p class="sobrancelha">Perguntas frequentes</p>
-    <h2>Antes de pedir, tire as <span class="destaque">dúvidas mais comuns</span></h2>
-    <p class="subtexto">Se não encontrar sua pergunta aqui, chame no WhatsApp.</p>
-
-    <div class="faq">
-      <details open>
-        <summary>Quanto tempo demora pra ficar pronto?</summary>
-        <p>Lentes de visão simples ficam prontas em até 1 hora, porque temos laboratório próprio com 3 máquinas facetadoras. Lentes personalizadas, como as multifocais, são produzidas no laboratório parceiro com prioridade no fluxo, e você recebe o prazo exato na ordem de serviço.</p>
-      </details>
-      <details>
-        <summary>Preciso comprar a armação com vocês?</summary>
-        <p>Não. Esse é o nosso modelo Lens-Only: você traz a armação que já tem, ou que comprou em outro lugar, e a gente cuida só das lentes. Assim você não paga margem embutida em armação.</p>
-      </details>
-      <details>
-        <summary>Por que o preço é mais baixo que em outras óticas?</summary>
-        <p>Porque trabalhamos só com lentes e com laboratório próprio. Sem margem de armação no meio, o preço fica em média 30% abaixo do mercado, com as mesmas marcas: ZEISS, Varilux, Hoya e Johnson &amp; Johnson.</p>
-      </details>
-      <details>
-        <summary>Dá pra parcelar?</summary>
-        <p>Sim. Todos os produtos podem ser parcelados em até 10x sem juros no cartão de crédito. Também aceitamos débito e pagamento por aproximação. Na aprovação do pedido, o pagamento pode ser de 50% ou do valor integral.</p>
-      </details>
-      <details>
-        <summary>Vocês aceitam receita feita em outro lugar?</summary>
-        <p>Sim, de qualquer oftalmologista. Para lentes personalizadas, a receita precisa ter sido emitida há no máximo 60 dias, que é a exigência dos laboratórios.</p>
-      </details>
-      <details>
-        <summary>Não moro em São Paulo. Consigo fazer minhas lentes com vocês?</summary>
-        <p>Sim, atendemos todo o Brasil. Você manda a foto da receita pelo WhatsApp, envia a armação para a gente e recebe o óculos pronto por courier ou manda alguém retirar.</p>
-      </details>
-      <details>
-        <summary>Como funciona a garantia?</summary>
-        <p>Lentes personalizadas têm 3 meses de garantia de adaptação a partir da data da receita, mais a garantia de fabricação de cada marca. Lentes de visão simples feitas com receita antiga ou grau copiado têm garantia só contra defeitos de fabricação. Os detalhes estão na seção <a href="#garantia" style="color:var(--azul);text-decoration:underline">Garantia</a>.</p>
-      </details>
-      <details>
-        <summary>Preciso agendar horário?</summary>
-        <p>Não precisa. Na loja do Boulevard Monti Mare o atendimento é por ordem de chegada. Se preferir, mande a receita antes pelo WhatsApp e já chegue com o orçamento pronto.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CONTATO ===================== -->
-<section class="secao" id="contato">
-  <div class="wrap centro">
-    <p class="sobrancelha">Contato</p>
-    <h2>Fale com a <span class="destaque">Paulista Lentes</span></h2>
-    <p class="subtexto">WhatsApp, telefone e endereço: escolha o jeito mais fácil pra você.</p>
-  </div>
-
-  <div class="wrap contato-grade">
-    <div class="contato-bloco">
-      <h3>Endereço</h3>
-      <p>
-        Av. Paulista, 392 – loja 147<br>
-        Boulevard Monti Mare<br>
-        Cerqueira César, São Paulo – SP<br>
-        01310-000
-      </p>
-      <p class="contato-dica">A poucos minutos a pé da estação Brigadeiro do metrô.</p>
-      <p>Também fazemos atendimento consultivo no Edifício Louis Pasteur, na Av. Paulista.</p>
-      <a class="btn btn--linha" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Paulista,+392+-+loja+147,+São+Paulo" target="_blank" rel="noopener">Ver rota no Maps</a>
-    </div>
-
-    <div class="contato-bloco">
-      <h3>Horário da loja</h3>
-      <table class="horarios">
-        <tr><th scope="row">Segunda a sexta</th><td>10h às 18h</td></tr>
-        <tr><th scope="row">Sábado</th><td>10h às 15h</td></tr>
-        <tr><th scope="row">Domingo</th><td>Fechado</td></tr>
-      </table>
-      <h3 style="margin-top:26px">Telefone e WhatsApp</h3>
-      <p><a class="tel-grande" href="tel:+551134593080">(11) 3459-3080</a></p>
-      <div class="contato-acoes">
-        <a class="btn btn--zap" href="#" data-zap-direto>Chamar no WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="contato-bloco">
-      <h3>Formas de pagamento</h3>
-      <ul class="lista-check">
-        <li><strong>Até 10x sem juros</strong> no cartão de crédito</li>
-        <li>Cartão de débito</li>
-        <li>Aproximação (NFC)</li>
-      </ul>
-      <h3 style="margin-top:26px">Estrutura da loja</h3>
-      <ul class="lista-check">
-        <li>Entrada com acessibilidade para cadeira de rodas</li>
-        <li>Estacionamento coberto, descoberto e no local</li>
-        <li>Envio e retirada por courier para todo o Brasil</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="mapa-caixa">
-      <iframe
-        src="https://www.google.com/maps?q=Paulista+Lentes,+Av.+Paulista,+392+-+loja+147,+Bela+Vista,+S%C3%A3o+Paulo+-+SP,+01310-000&output=embed"
-        title="Localização da Paulista Lentes na Av. Paulista, 392"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- ===================== CTA FINAL ===================== -->
 <svg class="skyline skyline--sobre-azul" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
@@ -1440,9 +1527,10 @@ h3{font-size:1.15rem;font-weight:500}
       <ul>
         <li><a href="#lens-only">O que é Lens-Only</a></li>
         <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#inicio">Início</a></li>
         <li><a href="#garantia">Garantia</a></li>
         <li><a href="#historia">Nossa história</a></li>
-        <li><a href="#duvidas">Dúvidas frequentes</a></li>
+        <li><a href="#garantia">Dúvidas frequentes</a></li>
         <li><a href="#pedido">Fazer pedido</a></li>
       </ul>
     </div>
@@ -1722,6 +1810,39 @@ document.getElementById("btn-enviar").addEventListener("click", () => {
 });
 
 mostrar(1, false);
+
+/* =========================================================
+   PÁGINAS - cada item do menu abre sozinho.
+   O endereço muda para #servicos, #historia etc., então os
+   botões voltar/avançar do navegador e links diretos funcionam.
+   ========================================================= */
+const TITULOS = {
+  "inicio": "Paulista Lentes | Lentes ZEISS, Varilux e Hoya na Av. Paulista",
+  "lens-only": "O que é Lens-Only | Paulista Lentes",
+  "precos": "Preços | Paulista Lentes",
+  "servicos": "Serviços | Paulista Lentes",
+  "como-funciona": "Como funciona | Paulista Lentes",
+  "garantia": "Garantia e dúvidas | Paulista Lentes",
+  "historia": "Nossa história | Paulista Lentes",
+  "contato": "Contato | Paulista Lentes",
+  "pedido": "Fazer pedido | Paulista Lentes"
+};
+const paginas = Array.from(document.querySelectorAll(".pagina"));
+
+function abrirPagina() {
+  let nome = location.hash.replace("#", "");
+  if (!TITULOS[nome]) nome = "inicio";
+  paginas.forEach(p => p.classList.toggle("ativa", p.dataset.pagina === nome));
+  menu.querySelectorAll("a").forEach(a => {
+    if (a.getAttribute("href") === "#" + nome) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+  document.title = TITULOS[nome];
+  if (nome === "pedido") mostrar(atual, false);
+  window.scrollTo({ top: 0, behavior: "auto" });
+}
+window.addEventListener("hashchange", abrirPagina);
+abrirPagina();
 </script>
 </body>
 </html>
